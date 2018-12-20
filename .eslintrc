@@ -1,5 +1,5 @@
 {
-  "extends": ["airbnb", "plugin:jest/recommended"],
+  "extends": ["airbnb", "plugin:jest/recommended", "prettier"],
   "globals": {
     "__DEV__": false,
     "navigator": false,
@@ -28,6 +28,8 @@
       }
     ],
     "react/jsx-filename-extension": "off",
-    "react/prefer-stateless-function": "off"
+    "react/prefer-stateless-function": "off",
+    "react/forbid-prop-types": "off",
+    "prettier/prettier": ["error"]
   }
 }
