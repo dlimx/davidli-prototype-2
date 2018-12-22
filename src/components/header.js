@@ -1,6 +1,6 @@
+import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import React from 'react';
 
 const Header = ({ siteTitle }) => (
   <div
@@ -14,6 +14,9 @@ const Header = ({ siteTitle }) => (
         margin: '0 auto',
         maxWidth: 960,
         padding: '1.45rem 1.0875rem',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -27,7 +30,34 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+        }}
+      >
+        <Link
+          to="/stories"
+          style={{
+            color: 'white',
+            textDecoration: 'none',
+            marginRight: 16,
+          }}
+        >
+          Stories
+        </Link>
+        <Link
+          to="/work"
+          style={{
+            color: 'white',
+            textDecoration: 'none',
+          }}
+        >
+          Work
+        </Link>
+      </div>
     </div>
+    <Link />
   </div>
 );
 
