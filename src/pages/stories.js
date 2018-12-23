@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
@@ -7,13 +8,19 @@ import SEO from '../components/SEO';
 import { rhythm } from '../utils/typography';
 
 class StoriesIndex extends React.Component {
+  static propTypes = {
+    location: PropTypes.string.isRequired,
+    data: PropTypes.shape({}).isRequired,
+  };
+
   render() {
-    const { data } = this.props;
+    const { data, location } = this.props;
+    console.log(data, location);
     const siteTitle = data.site.siteMetadata.title;
     const posts = data.allMarkdownRemark.edges;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={location} title={siteTitle}>
         <SEO
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}

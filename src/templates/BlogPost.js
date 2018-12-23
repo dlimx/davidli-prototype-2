@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
@@ -7,13 +8,24 @@ import SEO from '../components/SEO';
 import { rhythm, scale } from '../utils/typography';
 
 class BlogPostTemplate extends React.Component {
+  static propTypes = {
+    data: PropTypes.shape({}).isRequired,
+    pageContext: PropTypes.shape({
+      previous: PropTypes.shape({
+        next: PropTypes.shape({}).isRequired,
+      }).isRequired,
+    }).isRequired,
+    location: PropTypes.shape({}).isRequired,
+  };
+
   render() {
-    const post = this.props.data.markdownRemark;
-    const siteTitle = this.props.data.site.siteMetadata.title;
-    const { previous, next } = this.props.pageContext;
+    const { data, pageContext, location } = this.props;
+    const post = data.markdownRemark;
+    const siteTitle = data.site.siteMetadata.title;
+    const { previous, next } = pageContext;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
         <p

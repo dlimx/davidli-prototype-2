@@ -57,7 +57,6 @@ const Header = ({ siteTitle }) => (
         </Link>
       </div>
     </div>
-    <Link />
   </div>
 );
 
