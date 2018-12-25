@@ -13,7 +13,6 @@
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sass": "^2.0.7",
     "gatsby-plugin-sharp": "^2.0.14",
-    "gatsby-plugin-typography": "^2.2.0",
     "gatsby-remark-copy-linked-files": "^2.0.5",
     "gatsby-remark-images": "^3.0.1",
     "gatsby-remark-prismjs": "^3.0.0",
@@ -28,11 +27,8 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
-    "react-typography": "^0.16.13",
-    "typeface-merriweather": "0.0.43",
-    "typeface-montserrat": "0.0.43",
-    "typography": "^0.16.17",
-    "typography-theme-wordpress-2016": "^0.15.10"
+    "typeface-clear-sans": "^0.0.44",
+    "typeface-montserrat": "0.0.43"
   },
   "keywords": [
     "gatsby"

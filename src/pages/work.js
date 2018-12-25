@@ -6,7 +6,7 @@ import SEO from '../components/SEO';
 
 const WorkIndex = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="Work" keywords={[`work`, `gatsby`, `javascript`, `react`]} />
     <h1>Hello from work</h1>
     <p>Welcome to page 2</p>
     <Link to="/">Go back to the homepage</Link>

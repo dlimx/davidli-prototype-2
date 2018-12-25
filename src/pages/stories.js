@@ -2,8 +2,6 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import { rhythm } from '../utils/typography';
-
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -23,7 +21,7 @@ class StoriesIndex extends React.Component {
     return (
       <Layout location={location} title={siteTitle}>
         <SEO
-          title="All posts"
+          title="Stories"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <Bio />
@@ -33,7 +31,7 @@ class StoriesIndex extends React.Component {
             <div key={node.fields.slug}>
               <h3
                 style={{
-                  marginBottom: rhythm(1 / 4),
+                  marginBottom: 16,
                 }}
               >
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>

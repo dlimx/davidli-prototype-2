@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import { rhythm, scale } from '../utils/typography';
 
 class BlogPostTemplate extends React.Component {
   static propTypes = {
@@ -30,10 +29,9 @@ class BlogPostTemplate extends React.Component {
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
-            ...scale(-1 / 5),
             display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
+            marginBottom: 16,
+            marginTop: 16,
           }}
         >
           {post.frontmatter.date}
@@ -41,7 +39,7 @@ class BlogPostTemplate extends React.Component {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
-            marginBottom: rhythm(1),
+            marginBottom: 16,
           }}
         />
         <Bio />
