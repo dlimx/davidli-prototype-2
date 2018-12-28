@@ -2,6 +2,9 @@
 // Typography
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
+$font-body: 'Montserrat';
+$font-header: 'Clear Sans';
+
 b,
 strong {
 	font-weight: bold;
@@ -57,5 +60,5 @@ h6 {
 }
 
 :export {
-  fontBody: 'Montserrat';
+  fontBody: $font-body;
 }
