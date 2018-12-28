@@ -1,0 +1,11 @@
+@import '_Variables';
+
+.header {
+  padding: $padding 0;
+}
+
+@media (max-width: $container-padding-2 ) {
+  .header {
+    padding: $padding $padding-2;
+  }
+}

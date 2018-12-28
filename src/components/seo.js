@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
-import '../theme/reset.css';
-import '../theme/base.scss';
-
 const detailsQuery = graphql`
   query DefaultSEOQuery {
     site {

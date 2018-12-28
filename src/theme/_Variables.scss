@@ -3,6 +3,14 @@
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 $padding: 1rem;
-$padding-double: 2rem;
-$padding-triple: 3rem;
+$padding-2: 2rem;
+$padding-3: 3rem;
 $padding-half: 0.5rem;
+
+$container: 96rem;
+$container-padding: 98rem;
+$container-padding-2: 100rem;
+
+:export {
+  containerWidth: $container;
+}

@@ -33,3 +33,12 @@ $color-quinary: #f9cd04;
 $color-quinary-300: #fce88c;
 $color-quinary-500: $color-quinary;
 $color-quinary-700: #cca804;
+
+:export {
+  colorText: $color-text;
+  colorPrimary: $color-primary;
+  colorSecondary: $color-secondary;
+  colorTertiary: $color-tertiary;
+  colorQuaternary: $color-quaternary;
+  colorQuinary: $color-quinary;
+}
