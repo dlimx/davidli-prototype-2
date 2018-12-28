@@ -1,6 +1,7 @@
 ---
 title: 'Election 2016'
 date: 2016-11-15
+tags: ['self', 'news']
 blurb: "Let's hope the future will be better."
 ---
 

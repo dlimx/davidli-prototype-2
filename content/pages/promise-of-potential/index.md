@@ -1,6 +1,7 @@
 ---
 title: 'The Promise of Potential'
 date: 2016-10-18
+tags: ['self']
 blurb: "It's easy to say - it could have been, and harder to say that you failed."
 ---
 

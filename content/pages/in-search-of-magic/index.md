@@ -1,6 +1,7 @@
 ---
 title: 'In Search of Magic'
 date: 2017-10-07
+tags: ['self', 'travel']
 blurb: 'To dream, to love, and to wonder.'
 ---
 

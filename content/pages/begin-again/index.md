@@ -1,6 +1,7 @@
 ---
 title: 'Begin Again'
 date: 2018-10-08
+tags: ['self']
 blurb: 'But on a Wednesday, in a cafe, I watched it begin again.'
 ---
 

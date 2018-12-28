@@ -1,6 +1,7 @@
 ---
 title: 'Next Steps'
 date: 2017-05-20
+tags: ['self', 'work']
 blurb: 'I am so excited to be able to have this opportunity.'
 ---
 

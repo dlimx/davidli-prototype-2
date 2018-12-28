@@ -1,6 +1,7 @@
 ---
 title: 'An Open Letter'
 date: 2016-11-01
+tags: ['self']
 blurb: 'For when you need motivation.'
 ---
 

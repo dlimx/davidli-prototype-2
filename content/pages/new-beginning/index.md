@@ -1,6 +1,7 @@
 ---
 title: 'A New Beginning'
 date: 2016-09-20
+tags: ['self']
 blurb: 'The first post on my site, and the first of my blog.'
 ---
 

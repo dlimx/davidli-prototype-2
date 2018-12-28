@@ -1,6 +1,7 @@
 ---
 title: 'Memories'
 date: 2016-11-29
+tags: ['self']
 blurb: 'Reminiscing about a wonderful time I had in Montreal.'
 ---
 

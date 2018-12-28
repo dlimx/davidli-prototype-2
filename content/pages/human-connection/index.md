@@ -1,6 +1,7 @@
 ---
 title: 'Life: the Human Connection'
 date: 2016-10-11
+tags: ['self']
 blurb: 'Wondering about loneliness and friendship.'
 ---
 

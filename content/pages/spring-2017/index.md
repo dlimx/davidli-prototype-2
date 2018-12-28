@@ -1,6 +1,7 @@
 ---
 title: 'Spring 2017'
 date: 2017-03-20
+tags: ['self']
 blurb: '6 months in - a complete revamp and a status update on life.'
 ---
 

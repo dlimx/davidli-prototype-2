@@ -1,6 +1,7 @@
 ---
 title: 'A Reflection on 2016'
 date: 2016-12-27
+tags: ['self']
 blurb: 'Looking back on an exciting year, and looking forward to a better one.'
 ---
 
