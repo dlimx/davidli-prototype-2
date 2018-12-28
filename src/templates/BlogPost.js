@@ -10,9 +10,8 @@ class BlogPostTemplate extends React.Component {
   static propTypes = {
     data: PropTypes.shape({}).isRequired,
     pageContext: PropTypes.shape({
-      previous: PropTypes.shape({
-        next: PropTypes.shape({}).isRequired,
-      }).isRequired,
+      previous: PropTypes.shape({}).isRequired,
+      next: PropTypes.shape({}).isRequired,
     }).isRequired,
     location: PropTypes.shape({}).isRequired,
   };
