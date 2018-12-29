@@ -16,7 +16,6 @@ class AboutIndex extends Component {
 
   render() {
     const posts = this.props.data.allMarkdownRemark.edges;
-    console.log(posts, constants);
 
     return (
       <Layout>

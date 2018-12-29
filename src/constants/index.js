@@ -1,3 +1,4 @@
-export default {
-  blog: true,
+module.exports = {
+  blogActive: true,
+  blogPostsPerPage: 6,
 };

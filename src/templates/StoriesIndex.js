@@ -5,15 +5,17 @@ import PropTypes from 'prop-types';
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import BlogNavigation from '../components/BlogNavigation/index';
 
 class StoriesIndex extends React.Component {
   static propTypes = {
     location: PropTypes.shape({}).isRequired,
     data: PropTypes.shape({}).isRequired,
+    pageContext: PropTypes.shape({}).isRequired,
   };
 
   render() {
-    const { data, location } = this.props;
+    const { data, location, pageContext } = this.props;
 
     const siteTitle = data.site.siteMetadata.title;
     const posts = data.allMarkdownRemark.edges;
@@ -43,6 +45,7 @@ class StoriesIndex extends React.Component {
             </div>
           );
         })}
+        <BlogNavigation pageContext={pageContext} />
       </Layout>
     );
   }
@@ -51,13 +54,16 @@ class StoriesIndex extends React.Component {
 export default StoriesIndex;
 
 export const pageQuery = graphql`
-  query {
+  query($limit: Int!) {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: $limit
+    ) {
       edges {
         node {
           excerpt

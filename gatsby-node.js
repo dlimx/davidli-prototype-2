@@ -7,11 +7,16 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+const constants = require('./src/constants/index');
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
     const BlogPost = path.resolve(`./src/templates/BlogPost.js`);
+    const StoriesList = path.resolve(`./src/templates/StoriesList.js`);
+    const StoriesIndex = path.resolve(`./src/templates/StoriesIndex.js`);
+
     resolve(
       graphql(
         `
@@ -40,8 +45,38 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors);
         }
 
+        if (!constants.blogActive) {
+          return;
+        }
+
         // Create blog posts pages.
         const posts = result.data.allMarkdownRemark.edges;
+        const numPages = Math.ceil(posts.length / constants.blogPostsPerPage);
+
+        Array.from({ length: numPages }).forEach((_, i) => {
+          if (i === 0) {
+            createPage({
+              path: `/stories`,
+              component: StoriesIndex,
+              context: {
+                limit: constants.blogPostsPerPage,
+                currentPage: i + 1,
+                numPages,
+              },
+            });
+          } else {
+            createPage({
+              path: `/stories/${i + 1}`,
+              component: StoriesList,
+              context: {
+                limit: constants.blogPostsPerPage,
+                skip: i * constants.blogPostsPerPage,
+                numPages,
+                currentPage: i + 1,
+              },
+            });
+          }
+        });
 
         posts.forEach((post, index) => {
           const previous =

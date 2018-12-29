@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
+import constants from '../../constants/index';
+
 import styles from './styles.module.scss';
 import variables from '../../theme/base.scss';
 
@@ -48,9 +50,11 @@ const Header = ({ siteTitle }) => (
         <Link to="/" style={linkStyle} activeStyle={activeLinkStyle}>
           about
         </Link>
-        <Link to="/stories/" style={linkStyle} activeStyle={activeLinkStyle}>
-          stories
-        </Link>
+        {constants.blogActive && (
+          <Link to="/stories/" style={linkStyle} activeStyle={activeLinkStyle}>
+            stories
+          </Link>
+        )}
         <Link to="/work/" style={linkStyle} activeStyle={activeLinkStyle}>
           work
         </Link>

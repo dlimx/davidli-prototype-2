@@ -179,13 +179,6 @@
 	}
 }
 
-.row-centered {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 0;
-}
-
 // Larger than mobile screen
 @media (min-width: 40.0rem) { // Safari desktop has a bug using `rem`, but Safari mobile works
 	.row {
@@ -197,9 +190,5 @@
 			margin-bottom: inherit;
 			// padding: 0 1.0rem;
 		}
-	}
-
-	.row-centered {
-		flex-direction: row;
 	}
 }
