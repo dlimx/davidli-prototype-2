@@ -6,21 +6,21 @@ import styles from './styles.module.scss';
 import variables from '../../theme/base.scss';
 
 const linkStyle = {
-  color: 'white',
+  color: variables.colorPrimary,
   textDecoration: 'none',
-  paddingTop: '2px',
-  paddingBottom: '2px',
+  paddingTop: '3px',
+  paddingBottom: '3px',
   margin: '5px 10px',
   fontFamily: `${variables.fontBody}, sans-serif`,
 };
 
 const activeLinkStyle = {
-  borderBottom: '2px solid white',
+  borderBottom: `3px solid ${variables.colorPrimary}`,
   paddingBottom: '0px',
 };
 
 const Header = ({ siteTitle }) => (
-  <div style={{ backgroundColor: variables.colorPrimary, marginBottom: '2em' }}>
+  <div className={styles.container} style={{ marginBottom: '2em' }}>
     <div
       style={{
         margin: '0 auto',
@@ -31,11 +31,11 @@ const Header = ({ siteTitle }) => (
       }}
       className={styles.header}
     >
-      <h1 style={{ margin: 0, flex: 1 }}>
+      <h1 className={styles.logo} style={{ margin: 0, flex: 1 }}>
         <Link
           to="/"
           style={{
-            color: 'white',
+            color: variables.colorPrimary,
             textDecoration: 'none',
           }}
         >
@@ -48,10 +48,10 @@ const Header = ({ siteTitle }) => (
         <Link to="/" style={linkStyle} activeStyle={activeLinkStyle}>
           about
         </Link>
-        <Link to="/stories" style={linkStyle} activeStyle={activeLinkStyle}>
+        <Link to="/stories/" style={linkStyle} activeStyle={activeLinkStyle}>
           stories
         </Link>
-        <Link to="/work" style={linkStyle} activeStyle={activeLinkStyle}>
+        <Link to="/work/" style={linkStyle} activeStyle={activeLinkStyle}>
           work
         </Link>
       </div>

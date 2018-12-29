@@ -7,9 +7,9 @@ $padding-2: 2rem;
 $padding-3: 3rem;
 $padding-half: 0.5rem;
 
-$container: 96rem;
-$container-padding: 98rem;
-$container-padding-2: 100rem;
+$container: 960px;
+$container-padding: 980px;
+$container-padding-2: 1000px;
 
 :export {
   containerWidth: $container;
