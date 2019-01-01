@@ -72,7 +72,35 @@ function SEO({ description, lang, meta, keywords, title }) {
                   : [],
               )
               .concat(meta)}
-          />
+          >
+            <link
+              rel="apple-touch-icon"
+              sizes="180x180"
+              href="/apple-touch-icon.png"
+            />
+            <link
+              rel="icon"
+              type="image/png"
+              sizes="32x32"
+              href="/favicon-32x32.png"
+            />
+            <link
+              rel="icon"
+              type="image/png"
+              sizes="16x16"
+              href="/favicon-16x16.png"
+            />
+            <link rel="manifest" href="/site.webmanifest" />
+            <link
+              rel="mask-icon"
+              href="/safari-pinned-tab.svg"
+              color="#3198e8"
+            />
+            <meta name="apple-mobile-web-app-title" content="David Li" />
+            <meta name="application-name" content="David Li" />
+            <meta name="msapplication-TileColor" content="#203757" />
+            <meta name="theme-color" content="#ffffff" />
+          </Helmet>
         );
       }}
     />
