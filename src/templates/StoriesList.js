@@ -3,11 +3,12 @@ import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/Layout';
-import BlogNavigation from '../components/BlogNavigation/index';
+import StoriesNavigation from '../components/StoriesNavigation';
+import StoriesPreview from '../components/StoriesPreview';
 
 export default class StoriesList extends React.Component {
   static propTypes = {
-    date: PropTypes.shape({}).isRequired,
+    data: PropTypes.shape({}).isRequired,
     pageContext: PropTypes.shape({}).isRequired,
   };
 
@@ -17,24 +18,9 @@ export default class StoriesList extends React.Component {
     return (
       <Layout>
         {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: 16,
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          );
+          return <StoriesPreview post={node} />;
         })}
-        <BlogNavigation pageContext={pageContext} />
+        <StoriesNavigation pageContext={pageContext} />
       </Layout>
     );
   }

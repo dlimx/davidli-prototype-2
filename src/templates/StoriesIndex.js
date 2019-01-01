@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import BlogNavigation from '../components/BlogNavigation/index';
+import StoriesNavigation from '../components/StoriesNavigation';
+import StoriesPreview from '../components/StoriesPreview';
 
 class StoriesIndex extends React.Component {
   static propTypes = {
@@ -28,24 +29,9 @@ class StoriesIndex extends React.Component {
         />
         <Bio />
         {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: 16,
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          );
+          return <StoriesPreview post={node} />;
         })}
-        <BlogNavigation pageContext={pageContext} />
+        <StoriesNavigation pageContext={pageContext} />
       </Layout>
     );
   }
