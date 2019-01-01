@@ -5,7 +5,6 @@ import { graphql } from 'gatsby';
 import constants from '../constants';
 
 import Layout from '../components/Layout';
-import Image from '../components/Image';
 import SEO from '../components/SEO';
 
 class AboutIndex extends Component {
@@ -37,9 +36,6 @@ class AboutIndex extends Component {
           I have two broad goals in life: make the world a better place, and
           live and create interesting stories.
         </p>
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-          <Image />
-        </div>
       </Layout>
     );
   }
