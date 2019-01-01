@@ -6,7 +6,7 @@ const bioQuery = graphql`
   query BioQuery {
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
-        fixed(width: 50, height: 50) {
+        fixed(width: 200, height: 200) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -28,14 +28,31 @@ const Bio = () => (
     render={data => {
       const { author, social } = data.site.siteMetadata;
       return (
-        <div>
-          <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            paddingBottom: 40,
+            paddingTop: 20,
+          }}
+        >
+          <Image
+            fixed={data.avatar.childImageSharp.fixed}
+            alt={author}
+            style={{
+              borderRadius: 100,
+              marginRight: 20,
+              height: 200,
+              width: 240,
+              objectFit: 'cover',
+            }}
+          />
           <p>
             Written by <strong>{author}</strong> who lives and works in San
             Francisco building useful things.
             {` `}
-            <a href={`https://twitter.com/${social.twitter}`}>
-              You should follow him on Twitter
+            <a href={`https://instagram.com/${social.instagram}`}>
+              You should follow him on Instagram.
             </a>
           </p>
         </div>
