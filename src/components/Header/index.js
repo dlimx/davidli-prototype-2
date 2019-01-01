@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import constants from '../../constants/index';
 
 import styles from './styles.module.scss';
 import variables from '../../theme/base.scss';
+import image from './logo.png';
 
 const linkStyle = {
   color: variables.colorPrimary,
@@ -21,7 +22,7 @@ const activeLinkStyle = {
   paddingBottom: '0px',
 };
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <div className={styles.container} style={{ marginBottom: '2em' }}>
     <div
       style={{
@@ -33,19 +34,15 @@ const Header = ({ siteTitle }) => (
       }}
       className={styles.header}
     >
-      <h1 className={styles.logo} style={{ margin: 0, flex: 1 }}>
-        <Link
-          to="/"
-          style={{
-            color: variables.colorPrimary,
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <Link to="/">
+        <img src={image} alt="logo" style={{ height: 40, width: 40 }} />
+      </Link>
       <div
-        style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+        }}
       >
         <Link to="/" style={linkStyle} activeStyle={activeLinkStyle}>
           about
@@ -62,13 +59,5 @@ const Header = ({ siteTitle }) => (
     </div>
   </div>
 );
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: '',
-};
 
 export default Header;
