@@ -3,10 +3,10 @@ import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/Layout';
-import StoriesNavigation from '../components/StoriesNavigation';
-import StoriesPreview from '../components/StoriesPreview';
+import BlogNavigation from '../components/BlogNavigation';
+import BlogPreview from '../components/BlogPreview';
 
-export default class StoriesList extends React.Component {
+export default class BlogList extends React.Component {
   static propTypes = {
     data: PropTypes.shape({}).isRequired,
     pageContext: PropTypes.shape({}).isRequired,
@@ -18,9 +18,9 @@ export default class StoriesList extends React.Component {
     return (
       <Layout>
         {posts.map(({ node }) => {
-          return <StoriesPreview post={node} />;
+          return <BlogPreview post={node} />;
         })}
-        <StoriesNavigation pageContext={pageContext} />
+        <BlogNavigation pageContext={pageContext} />
       </Layout>
     );
   }

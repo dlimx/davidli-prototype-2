@@ -35,7 +35,8 @@
     "react/prefer-stateless-function": "off",
     "react/forbid-prop-types": "off",
     "react/jsx-one-expression-per-line": "off",
-    "prettier/prettier": ["error"]
+    "prettier/prettier": ["error"],
+    "sort-imports": "off",
   },
   "parser": "babel-eslint"
 }

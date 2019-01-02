@@ -14,8 +14,8 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const BlogPost = path.resolve(`./src/templates/BlogPost.js`);
-    const StoriesList = path.resolve(`./src/templates/StoriesList.js`);
-    const StoriesIndex = path.resolve(`./src/templates/StoriesIndex.js`);
+    const BlogList = path.resolve(`./src/templates/BlogList.js`);
+    const BlogIndex = path.resolve(`./src/templates/BlogIndex.js`);
 
     resolve(
       graphql(
@@ -57,7 +57,7 @@ exports.createPages = ({ graphql, actions }) => {
           if (i === 0) {
             createPage({
               path: `/stories`,
-              component: StoriesIndex,
+              component: BlogIndex,
               context: {
                 limit: constants.blogPostsPerPage,
                 currentPage: i + 1,
@@ -67,7 +67,7 @@ exports.createPages = ({ graphql, actions }) => {
           } else {
             createPage({
               path: `/stories/${i + 1}`,
-              component: StoriesList,
+              component: BlogList,
               context: {
                 limit: constants.blogPostsPerPage,
                 skip: i * constants.blogPostsPerPage,

@@ -6,7 +6,7 @@ import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
-class BlogPostTemplate extends React.Component {
+class BlogPost extends React.Component {
   static propTypes = {
     data: PropTypes.shape({}).isRequired,
     pageContext: PropTypes.shape({
@@ -72,7 +72,7 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate;
+export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {

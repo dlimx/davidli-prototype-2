@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
-export default class StoriesPreview extends Component {
+export default class BlogPreview extends Component {
   static propTypes = {
     post: PropTypes.shape({
       frontmatter: PropTypes.shape({

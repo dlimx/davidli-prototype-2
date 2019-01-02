@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
-export default class StoriesNavigation extends Component {
+export default class BlogNavigation extends Component {
   static propTypes = {
     pageContext: PropTypes.shape({}).isRequired,
   };

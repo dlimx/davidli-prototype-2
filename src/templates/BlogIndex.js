@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import StoriesNavigation from '../components/StoriesNavigation';
-import StoriesPreview from '../components/StoriesPreview';
+import BlogNavigation from '../components/BlogNavigation';
+import BlogPreview from '../components/BlogPreview';
 
-class StoriesIndex extends React.Component {
+class BlogIndex extends React.Component {
   static propTypes = {
     location: PropTypes.shape({}).isRequired,
     data: PropTypes.shape({}).isRequired,
@@ -29,15 +29,15 @@ class StoriesIndex extends React.Component {
         />
         <Bio />
         {posts.map(({ node }) => {
-          return <StoriesPreview post={node} />;
+          return <BlogPreview post={node} />;
         })}
-        <StoriesNavigation pageContext={pageContext} />
+        <BlogNavigation pageContext={pageContext} />
       </Layout>
     );
   }
 }
 
-export default StoriesIndex;
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query($limit: Int!) {
