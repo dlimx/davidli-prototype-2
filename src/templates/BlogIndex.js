@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import Bio from '../components/Bio';
+import BlogIntro from '../components/BlogIntro';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import BlogNavigation from '../components/BlogNavigation';
@@ -27,10 +27,10 @@ class BlogIndex extends React.Component {
           title="Stories"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <Bio />
-        {posts.map(({ node }) => {
-          return <BlogPreview post={node} />;
-        })}
+        <BlogIntro />
+        {posts.map(({ node }) => (
+          <BlogPreview post={node} />
+        ))}
         <BlogNavigation pageContext={pageContext} />
       </Layout>
     );

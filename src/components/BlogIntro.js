@@ -2,7 +2,7 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
-const bioQuery = graphql`
+const introQuery = graphql`
   query BioQuery {
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
@@ -22,9 +22,9 @@ const bioQuery = graphql`
   }
 `;
 
-const Bio = () => (
+const BlogIntro = () => (
   <StaticQuery
-    query={bioQuery}
+    query={introQuery}
     render={data => {
       const { author, social } = data.site.siteMetadata;
       return (
@@ -51,7 +51,7 @@ const Bio = () => (
             Written by <strong>{author}</strong> who lives and works in San
             Francisco building useful things.
             {` `}
-            <a href={`https://instagram.com/${social.instagram}`}>
+            <a href={`https://www.instagram.com/${social.instagram}`}>
               You should follow him on Instagram.
             </a>
           </p>
@@ -61,4 +61,4 @@ const Bio = () => (
   />
 );
 
-export default Bio;
+export default BlogIntro;

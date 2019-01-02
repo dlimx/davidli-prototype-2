@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import Bio from '../components/Bio';
+import BlogIntro from '../components/BlogIntro';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
@@ -41,7 +41,7 @@ class BlogPost extends React.Component {
             marginBottom: 16,
           }}
         />
-        <Bio />
+        <BlogIntro />
 
         <ul
           style={{

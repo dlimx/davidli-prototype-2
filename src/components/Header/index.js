@@ -44,7 +44,7 @@ const Header = () => (
           alignItems: 'center',
         }}
       >
-        <Link to="/" style={linkStyle} activeStyle={activeLinkStyle}>
+        <Link to="/about/" style={linkStyle} activeStyle={activeLinkStyle}>
           about
         </Link>
         {constants.blogActive && (
@@ -52,7 +52,7 @@ const Header = () => (
             stories
           </Link>
         )}
-        <Link to="/work/" style={linkStyle} activeStyle={activeLinkStyle}>
+        <Link to="/" style={linkStyle} activeStyle={activeLinkStyle}>
           work
         </Link>
       </div>

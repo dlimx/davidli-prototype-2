@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/Layout';
@@ -17,9 +17,9 @@ export default class BlogList extends React.Component {
     const posts = data.allMarkdownRemark.edges;
     return (
       <Layout>
-        {posts.map(({ node }) => {
-          return <BlogPreview post={node} />;
-        })}
+        {posts.map(({ node }) => (
+          <BlogPreview post={node} />
+        ))}
         <BlogNavigation pageContext={pageContext} />
       </Layout>
     );
