@@ -7,8 +7,8 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
-	background-color: $color-primary;
-	border: .1rem solid $color-primary;
+	background-color: $color-secondary;
+	border: .1rem solid $color-secondary;
 	border-radius: .4rem;
 	color: $color-text-light;
 	cursor: pointer;
@@ -26,8 +26,8 @@ input[type='submit'] {
 
 	&:focus,
 	&:hover {
-		background-color: $color-secondary;
-		border-color: $color-secondary;
+		background-color: $color-secondary-100;
+		border-color: $color-secondary-100;
 		color: $color-text-light;
 		outline: 0;
 	}
@@ -38,14 +38,14 @@ input[type='submit'] {
 
 		&:focus,
 		&:hover {
-			background-color: $color-primary;
-			border-color: $color-primary;
+			background-color: $color-secondary-100;
+			border-color: $color-secondary-100;
 		}
 	}
 
 	&.button-outline {
 		background-color: transparent;
-		color: $color-primary;
+		color: $color-secondary;
 
 		&:focus,
 		&:hover {
@@ -59,7 +59,7 @@ input[type='submit'] {
 			&:focus,
 			&:hover {
 				border-color: inherit;
-				color: $color-primary;
+				color: $color-secondary-100;
 			}
 		}
 	}
@@ -67,20 +67,20 @@ input[type='submit'] {
 	&.button-clear {
 		background-color: transparent;
 		border-color: transparent;
-		color: $color-primary;
+		color: $color-secondary;
 
 		&:focus,
 		&:hover {
 			background-color: transparent;
 			border-color: transparent;
-			color: $color-secondary;
+			color: $color-secondary-100;
 		}
 
 		&[disabled] {
 
 			&:focus,
 			&:hover {
-				color: $color-primary;
+				color: $color-secondary-100;
 			}
 		}
 	}

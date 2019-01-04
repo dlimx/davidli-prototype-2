@@ -3,11 +3,11 @@
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 a {
-	color: $color-primary;
+	color: $color-secondary;
 	text-decoration: none;
 
 	&:focus,
 	&:hover {
-		color: $color-secondary;
+		color: $color-secondary-400;
 	}
 }
