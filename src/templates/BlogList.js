@@ -18,7 +18,7 @@ export default class BlogList extends React.Component {
     return (
       <Layout>
         {posts.map(({ node }) => (
-          <BlogPreview post={node} />
+          <BlogPreview post={node} key={node.fields.slug} />
         ))}
         <BlogNavigation pageContext={pageContext} />
       </Layout>

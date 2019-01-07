@@ -29,7 +29,7 @@ class BlogIndex extends React.Component {
         />
         <BlogIntro />
         {posts.map(({ node }) => (
-          <BlogPreview post={node} />
+          <BlogPreview post={node} key={node.fields.slug} />
         ))}
         <BlogNavigation pageContext={pageContext} />
       </Layout>

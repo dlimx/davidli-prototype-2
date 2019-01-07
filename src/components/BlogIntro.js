@@ -42,9 +42,6 @@ const BlogIntro = () => (
             style={{
               borderRadius: 100,
               marginRight: 20,
-              height: 200,
-              width: 240,
-              objectFit: 'cover',
             }}
           />
           <p>
