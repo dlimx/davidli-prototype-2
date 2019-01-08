@@ -16,7 +16,7 @@ class ProjectPage extends React.Component {
   };
 
   render() {
-    const { data, pageContext, location } = this.props;
+    const { data, location } = this.props;
     const post = data.markdownRemark;
     const siteTitle = data.site.siteMetadata.title;
 
@@ -60,7 +60,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM, YYYY")
         tags
         website
       }
