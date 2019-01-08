@@ -32,9 +32,11 @@ export const storiesListQuery = graphql`
       sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit
       skip: $skip
+      filter: { collection: { eq: "posts" } }
     ) {
       edges {
         node {
+          collection
           excerpt
           fields {
             slug
