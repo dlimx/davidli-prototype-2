@@ -26,8 +26,8 @@ export default class BlogList extends React.Component {
   }
 }
 
-export const storiesListQuery = graphql`
-  query storiesListQuery($skip: Int!, $limit: Int!) {
+export const blogListQuery = graphql`
+  query blogListQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit
@@ -44,6 +44,7 @@ export const storiesListQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            tags
           }
         }
       }

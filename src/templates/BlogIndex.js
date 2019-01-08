@@ -39,7 +39,7 @@ class BlogIndex extends React.Component {
 
 export default BlogIndex;
 
-export const pageQuery = graphql`
+export const blogIndexQuery = graphql`
   query($limit: Int!) {
     site {
       siteMetadata {
@@ -61,6 +61,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            tags
           }
         }
       }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
-export default class BlogPreview extends Component {
+export default class ProjectPreview extends Component {
   static propTypes = {
     post: PropTypes.shape({
       frontmatter: PropTypes.shape({
@@ -27,10 +27,7 @@ export default class BlogPreview extends Component {
             marginBottom: 16,
           }}
         >
-          <Link
-            style={{ boxShadow: `none` }}
-            to={`/stories${post.fields.slug}`}
-          >
+          <Link style={{ boxShadow: `none` }} to={`/work${post.fields.slug}`}>
             {title}
           </Link>
         </h3>

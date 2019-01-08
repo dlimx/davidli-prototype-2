@@ -50,7 +50,7 @@ const createBlogPosts = (actions, result) => {
     throw result.errors;
   }
 
-  if (!constants.blogActive) {
+  if (!constants.blogActive || !result.data.allMarkdownRemark) {
     return;
   }
 
@@ -61,7 +61,7 @@ const createBlogPosts = (actions, result) => {
   Array.from({ length: numPages }).forEach((_, i) => {
     if (i === 0) {
       createPage({
-        path: `/stories`,
+        path: `/stories/`,
         component: BlogIndex,
         context: {
           limit: constants.blogPostsPerPage,
@@ -88,7 +88,7 @@ const createBlogPosts = (actions, result) => {
     const next = index === 0 ? null : posts[index - 1].node;
 
     createPage({
-      path: post.node.fields.slug,
+      path: `/stories${post.node.fields.slug}`,
       component: BlogPost,
       context: {
         slug: post.node.fields.slug,
@@ -129,10 +129,42 @@ const getProjects = graphql =>
     );
   });
 
-exports.createPages = ({ graphql, actions }) =>
-  Promise.all([getBlogPosts(graphql), getProjects(graphql)]).then(data => {
-    createBlogPosts(actions, data[0]);
+const createProjects = (actions, result) => {
+  const { createPage } = actions;
+  const ProjectPage = path.resolve(`./src/templates/ProjectPage.js`);
+
+  if (result.errors) {
+    console.log(result.errors);
+    throw result.errors;
+  }
+
+  if (!result.data.allMarkdownRemark) {
+    return;
+  }
+
+  // Create project pages.
+  const projects = result.data.allMarkdownRemark.edges;
+
+  projects.forEach(project => {
+    createPage({
+      path: `/work${project.node.fields.slug}`,
+      component: ProjectPage,
+      context: {
+        slug: project.node.fields.slug,
+      },
+    });
   });
+};
+
+exports.createPages = ({ graphql, actions }) =>
+  Promise.all([getBlogPosts(graphql), getProjects(graphql)])
+    .then(data => {
+      createBlogPosts(actions, data[0]);
+      createProjects(actions, data[1]);
+    })
+    .catch(error => {
+      console.error(error);
+    });
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
