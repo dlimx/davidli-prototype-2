@@ -12,3 +12,7 @@ The technique of style transfer is utilized to apply the learned styles to user 
 Recommendation: try it out using a well-textured photo (one that's more complex than simple colors)!
 
 Built in collaboration with Gabriel Alacchi, Robert Fratila, and Alice Scott.
+
+![alt text](paint1-min.jpg 'Sunset over a beautiful city')
+
+![alt text](paint2-min.jpg 'Sunset over a beautiful city')
