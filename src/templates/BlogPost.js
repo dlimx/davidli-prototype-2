@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import BlogIntro from '../components/BlogIntro';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import BackButton from '../components/BackButton';
 
 class BlogPost extends React.Component {
   static propTypes = {
@@ -25,6 +26,7 @@ class BlogPost extends React.Component {
     return (
       <Layout location={location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
+        <BackButton to="/stories/" />
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
@@ -54,14 +56,14 @@ class BlogPost extends React.Component {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={`/stories${previous.fields.slug}`} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link to={`/stories${next.fields.slug}`} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
