@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import { graphql, withPrefix } from 'gatsby';
 
 import constants from '../constants';
 
@@ -36,6 +36,9 @@ class AboutIndex extends Component {
           I have two broad goals in life: make the world a better place, and
           live and create interesting stories.
         </p>
+        <hr />
+        <h3>Links</h3>
+        <a href={withPrefix('/Resume-LiMinXiao.pdf')}>Resume</a>
       </Layout>
     );
   }
