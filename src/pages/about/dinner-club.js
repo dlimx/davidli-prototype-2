@@ -32,7 +32,7 @@ export default DinnerClub;
 
 export const dinnerPhotoQuery = graphql`
   query dinnerPhotoQuery {
-    avatar: file(absolutePath: { regex: "/dinner-club/" }) {
+    avatar: file(absolutePath: { regex: "/dinner-club/" })
     site {
       siteMetadata {
         author
