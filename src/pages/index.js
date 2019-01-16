@@ -22,7 +22,7 @@ class AboutIndex extends Component {
           title="Home"
           keywords={[`gatsby`, `application`, `react`, `david`]}
         />
-        <h1>Hey, I'm David</h1>
+        <h1>Hey, I&#39;m David</h1>
         <p>
           I am a software engineer currently at{' '}
           <a href="https://quartermaster.com">Quartermaster</a>.
@@ -42,7 +42,27 @@ class AboutIndex extends Component {
         <hr />
         <h3>Life Projects</h3>
         <Link to="/about/ulysses/">Ulysses</Link>
+        <blockquote>
+          What&#39;s something you&#39;ve done, or that you want to do, that you
+          think I should do? It can be anything you want, as easy or as hard as
+          you want it to be. And as long as you give me the rest of my life to
+          do it, I promise that I will.
+        </blockquote>
+        <p>
+          I have received 24 challenges, and here is my journey to finish them
+          thus far.
+        </p>
         <Link to="/about/dinner-club/">Dinner Club</Link>
+        <blockquote>
+          Every week, my fellow cooks and I each invite one person. The only
+          rule? It has to be someone the other two don&#39;t know. Themed,
+          home-cooked meals, and warm, delightful friendship. No strings
+          attached, and anyone is welcome to join.
+        </blockquote>
+        <p>
+          If you want to join the invite list, please just reach out. Check out
+          some of our past meals here.
+        </p>
       </Layout>
     );
   }
