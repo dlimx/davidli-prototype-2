@@ -30,26 +30,16 @@ class DinnerClub extends Component {
 
 export default DinnerClub;
 
-// export const dinnerPhotoQuery = graphql`
-//   query dinnerPhotoQuery {
-//     allMarkdownRemark(
-//       sort: { fields: [frontmatter___date], order: DESC }
-//       filter: { collection: { eq: "projects" } }
-//     ) {
-//       edges {
-//         node {
-//           collection
-//           excerpt
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             date(formatString: "MMMM, YYYY")
-//             title
-//             tags
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+export const dinnerPhotoQuery = graphql`
+  query dinnerPhotoQuery {
+    avatar: file(absolutePath: { regex: "/dinner-club/" }) {
+    site {
+      siteMetadata {
+        author
+        social {
+          instagram
+        }
+      }
+    }
+  }
+`;

@@ -36,12 +36,18 @@ class AboutIndex extends Component {
           I have two broad goals in life: make the world a better place, and
           live and create interesting stories.
         </p>
+
         <hr />
+
         <h3>Links</h3>
         <a href={withPrefix('/Resume-LiMinXiao.pdf')}>Resume</a>
+
         <hr />
+
         <h3>Life Projects</h3>
-        <Link to="/about/ulysses/">Ulysses</Link>
+        <Link to="/about/ulysses/">
+          <h5>Ulysses</h5>
+        </Link>
         <blockquote>
           What&#39;s something you&#39;ve done, or that you want to do, that you
           think I should do? It can be anything you want, as easy or as hard as
@@ -52,7 +58,11 @@ class AboutIndex extends Component {
           I have received 24 challenges, and here is my journey to finish them
           thus far.
         </p>
-        <Link to="/about/dinner-club/">Dinner Club</Link>
+        <Link to="/about/ulysses/">My Challenges →</Link>
+        <div style={{ height: 40 }} />
+        <Link to="/about/dinner-club/">
+          <h5>Dinner Club</h5>
+        </Link>
         <blockquote>
           Every week, my fellow cooks and I each invite one person. The only
           rule? It has to be someone the other two don&#39;t know. Themed,
@@ -63,6 +73,7 @@ class AboutIndex extends Component {
           If you want to join the invite list, please just reach out. Check out
           some of our past meals here.
         </p>
+        <Link to="/about/dinner-club/">Our dinners →</Link>
       </Layout>
     );
   }
