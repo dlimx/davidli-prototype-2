@@ -20,7 +20,7 @@ class WorkIndex extends Component {
           title="Work"
           keywords={[`work`, `gatsby`, `javascript`, `react`]}
         />
-        <h1>Hey, I'm David</h1>
+        <h1>Work</h1>
         <p>
           I am a software engineer currently at{' '}
           <a href="https://quartermaster.com">Quartermaster</a>.
