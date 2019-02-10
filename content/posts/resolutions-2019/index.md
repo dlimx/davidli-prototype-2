@@ -1,7 +1,6 @@
 ---
 title: 'Resolutions 2019'
-date: 2019-01-11
-tags: ['self']
+date: 2019-01-26
 blurb: 'New year, new me.'
 ---
 
@@ -25,6 +24,8 @@ These three resolutions have all been life goals that I feel I haven't pursued e
 
 I say I treasure new experiences, but I find that often let my fears get in the way of actually pursuing them. Sometimes it's just the struggle of organizing and planning, finding both an itinerary and the time to do something, like travel. Other times it's overthinking and worrying about the potential negative consequences, usually failure.
 
+I'd like to open up more, and be more vulnerable. To say what's on my mind, even if it's not the best, safest, or perfect thing to say. I expect
+
 I've had one Ulysses challenge about this - to spend a year trying things that are scary, reckless & risky. Better now than never. This is a promise to chase the daring and risky, to do the uncertain and embarrassing. In the name of memories.
 
 This is for now - to new experiences and saying yes, to taking initiative and being brave.
@@ -47,8 +48,10 @@ In the short term, it's just a focus on getting back to the gym regularly, while
 
 ---
 
-### 2019
+#### 2019
 
-So my resolutions these year are much more nebulous than others (which have been along the lines of "Get 40 on the MCAT" or "Cook every day"). I think in one way, it may make it easier to fail, when either anything (or nothing) would properly fulfill these resolutions. On the other hand, maybe these aren't so much hard goals but guidelines to live life by. I'll definitely be thinking of them throughout the year - reflecting on what I've done and the choices I've made - and refining my smaller goals to realign with what I want. Every three months I'll likely be reviewing my current actionable goals, just mindful of the long-term trajectory.
+So my resolutions these year are much more nebulous than others (which have been along the lines of "Get 40 on the MCAT" or "Cook every day"). I think in one way, it may make it easier to fail, when either anything (or nothing) would properly fulfill these resolutions. On the other hand, maybe these aren't so much hard goals but guidelines to live life by. I'll definitely be thinking of them throughout the year - reflecting on what I've done and the choices I've made - and refining my smaller goals to realign with what I want. Every three months I'll likely be reviewing my current actionable goals, just mindful of the long-term trajectory.'
+
+Also, if you're in Toronto (or will come through at any point), come over for dinner. Drop me a line at [me@davidli.io](mailto:me@davidli.io) or just message me!
 
 And hopefully, by the end of the year, I'll feel that these have be fulfilled. It's likely that there will be many moments where I forget, but that's okay. It's a new year, with a new me.

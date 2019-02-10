@@ -26,6 +26,7 @@
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
+    "react-collapsible": "^2.5.0",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
     "typeface-clear-sans": "^0.0.44",
