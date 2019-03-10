@@ -1,9 +1,14 @@
+.main--container {
+  margin: 0 auto;
+  max-width: $container;
+}
+
 .layout--container {
   margin: 0 auto;
   max-width: $container;
   padding: 0 $padding-2;
 
-  @media #{$breakpoint-md} {
+  @media #{$breakpoint-gt-sm} {
     padding: 0 $padding-3;
   }
   @media #{$breakpoint-lt-sm} {
@@ -23,7 +28,7 @@
   flex-direction: row;
   position: relative;
   width: '100%';
-  @media #{$breakpoint-lt-sm} {
+  @media #{$breakpoint-lt-md} {
     flex-direction: column;
     align-items: center;
   }

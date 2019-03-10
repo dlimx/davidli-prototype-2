@@ -6,7 +6,7 @@ import '../theme/reset.css';
 import '../theme/base.scss';
 import variables from '../theme/_Variables.scss';
 
-import Header from './Header';
+import Header from './Header/Header';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -20,7 +20,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div className="layout--grid-row layout--container">
+      <div className="layout--grid-row main--container">
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
