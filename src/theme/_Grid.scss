@@ -6,15 +6,12 @@
 
 .layout--container {
   margin: 0 auto;
-  max-width: $container;
-  padding: 0 $padding-2;
+  max-width: $container-body;
+  padding: $padding-2 $padding-2;
 
   @media #{$breakpoint-gt-sm} {
-    padding: 0 $padding-3;
+    padding: $padding-4 $padding-2;
   }
-  @media #{$breakpoint-lt-sm} {
-    padding: 0 $padding;
-	}
 }
 
 .layout--row {

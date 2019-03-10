@@ -40,7 +40,7 @@ const BlogIntro = () => (
             fixed={data.avatar.childImageSharp.fixed}
             alt={author}
             style={{
-              borderRadius: 100,
+              borderRadius: '50%',
               marginRight: 20,
             }}
           />

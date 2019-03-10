@@ -22,14 +22,7 @@ const Layout = ({ children }) => (
     render={data => (
       <div className="layout--grid-row main--container">
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            padding: '1rem 0',
-            maxWidth: variables.bodyWidth,
-          }}
-        >
-          {children}
-        </div>
+        <div className="layout--container">{children}</div>
       </div>
     )}
   />

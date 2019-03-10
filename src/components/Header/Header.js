@@ -10,33 +10,35 @@ import image from './logo.png';
 const Header = () => (
   <div className={`${styles.container}`}>
     <div className={`${styles.header}`}>
-      <Link to="/">
-        <img src={image} alt="logo" style={{ height: 40, width: 40 }} />
-      </Link>
-      <div className={styles.linkContainer}>
-        <Link
-          to="/"
-          className={styles.link}
-          activeClassName={styles.activeLink}
-        >
-          about
+      <div className={`${styles.headerContent}`}>
+        <Link to="/">
+          <img src={image} alt="logo" style={{ height: 40, width: 40 }} />
         </Link>
-        {constants.blogActive && (
+        <div className={styles.linkContainer}>
           <Link
-            to="/stories/"
+            to="/"
             className={styles.link}
-            activeClassName={styles.activeLink}
+            activeClassName={styles.linkActive}
           >
-            stories
+            about
           </Link>
-        )}
-        <Link
-          to="/work/"
-          className={styles.link}
-          activeClassName={styles.activeLink}
-        >
-          work
-        </Link>
+          {constants.blogActive && (
+            <Link
+              to="/stories/"
+              className={styles.link}
+              activeClassName={styles.linkActive}
+            >
+              stories
+            </Link>
+          )}
+          <Link
+            to="/work/"
+            className={styles.link}
+            activeClassName={styles.linkActive}
+          >
+            work
+          </Link>
+        </div>
       </div>
     </div>
   </div>
