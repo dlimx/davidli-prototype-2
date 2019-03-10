@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class DinnerCard extends React.Component {
   render() {
     return (
-      <div className="card">
+      <div>
         <h3>{this.props.title}</h3>
         <img className="img" src={this.props.image} />
       </div>

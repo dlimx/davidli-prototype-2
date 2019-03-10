@@ -16,7 +16,7 @@ class Ulysses extends Component {
           keywords={[`work`, `gatsby`, `javascript`, `react`]}
         />
         <div>
-          <div className="box">
+          <div>
             <h2>Ulysses</h2>
             <blockquote>
               What's something you've done, or that you want to do, that you
@@ -28,7 +28,7 @@ class Ulysses extends Component {
               promise that I will.
             </blockquote>
           </div>
-          <div className="card">
+          <div>
             <h3>1-10 - Waterloo</h3>
             <Collapsible
               className="progress"
@@ -121,7 +121,7 @@ class Ulysses extends Component {
             <Collapsible trigger="Colten Wimmer - Kiss as many girls as you can." />
             <Collapsible trigger="Julie-Nathalie Vallée-Trudeau - Get a PADI license in SCUBA diving, ideally somewhere exotic." />
           </div>
-          <div className="card">
+          <div>
             <h3>21-24 - Montreal Pt 2</h3>
             <Collapsible trigger="Jerry Dong - Eat healthier and build a six pack." />
             <Collapsible trigger="Anna Victoria Rahardjo - Keep in contact with people that matter to you (aka me)." />

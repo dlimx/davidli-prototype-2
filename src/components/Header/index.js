@@ -13,7 +13,7 @@ const linkStyle = {
   textDecoration: 'none',
   paddingTop: '3px',
   paddingBottom: '3px',
-  margin: '5px 10px',
+  margin: '1rem 0',
   fontFamily: `${variables.fontBody}, sans-serif`,
 };
 
@@ -23,40 +23,21 @@ const activeLinkStyle = {
 };
 
 const Header = () => (
-  <div className={styles.container} style={{ marginBottom: '2em' }}>
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-      }}
-      className={styles.header}
-    >
-      <Link to="/">
-        <img src={image} alt="logo" style={{ height: 40, width: 40 }} />
+  <div className={`${styles.header}`}>
+    <Link to="/">
+      <img src={image} alt="logo" style={{ height: 40, width: 40 }} />
+    </Link>
+    <Link to="/" style={linkStyle} activeStyle={activeLinkStyle}>
+      about
+    </Link>
+    {constants.blogActive && (
+      <Link to="/stories/" style={linkStyle} activeStyle={activeLinkStyle}>
+        stories
       </Link>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-        }}
-      >
-        <Link to="/" style={linkStyle} activeStyle={activeLinkStyle}>
-          about
-        </Link>
-        {constants.blogActive && (
-          <Link to="/stories/" style={linkStyle} activeStyle={activeLinkStyle}>
-            stories
-          </Link>
-        )}
-        <Link to="/work/" style={linkStyle} activeStyle={activeLinkStyle}>
-          work
-        </Link>
-      </div>
-    </div>
+    )}
+    <Link to="/work/" style={linkStyle} activeStyle={activeLinkStyle}>
+      work
+    </Link>
   </div>
 );
 

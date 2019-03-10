@@ -2,10 +2,14 @@
 
 .header {
   padding: $padding $padding;
-}
+  display: flex;
 
-@media (max-width: $container-padding-2) {
-  .header {
+  @media #{$breakpoint-gt-md} {
+    width: $header;
+    flex-direction: column;
+  }
+
+  @media #{$breakpoint-lt-sm} {
     padding: $padding $padding-2;
   }
 }

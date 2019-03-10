@@ -14,7 +14,7 @@ class DinnerClub extends Component {
           title="Dinner Club"
           keywords={[`work`, `gatsby`, `javascript`, `react`]}
         />
-        <div className="box">
+        <div>
           <h2>Dinner Club</h2>
           <blockquote>
             Every week, my fellow cooks and I each invite one person. The only
@@ -24,13 +24,13 @@ class DinnerClub extends Component {
             Themed, home-cooked meals, and warm, delightful friendship. No
             strings attached, and anyone is welcome to join.
           </blockquote>
-          <div className="centered card small">
+          <div>
             <a href="mailto:david.minxiao.li@gmail.com" target="new">
               <span>Email me and come for dinner!</span>
             </a>
           </div>
         </div>
-        <div className="blog">
+        <div>
           <DinnerCard
             title="Cool for the Summer"
             image="https://imgur.com/rKImiy8.jpg"

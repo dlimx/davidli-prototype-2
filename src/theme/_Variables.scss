@@ -7,10 +7,24 @@ $padding-2: 2rem;
 $padding-3: 3rem;
 $padding-half: 0.5rem;
 
-$container: 960px;
-$container-padding: 980px;
-$container-padding-2: 1000px;
+$container: 1200px;
+$header: 240px;
+$container-body: 960px;
+
+$breakpoint-xs: 'screen and (max-width: 599px)';
+$breakpoint-gt-xs: 'screen and (min-width: 600px)';
+$breakpoint-sm: 'screen and (min-width: 600px) and (max-width: 959px)';
+$breakpoint-lt-sm: 'screen and (max-width: 959px)';
+$breakpoint-gt-sm: 'screen and (min-width: 960px)';
+$breakpoint-md: 'screen and (min-width: 960px) and (max-width: 1199px)';
+$breakpoint-lt-md: 'screen and (max-width: 1199px)';
+$breakpoint-gt-md: 'screen and (min-width: 1280px)';
+$breakpoint-lg: 'screen and (min-width: 1280px) and (max-width: 1919px)';
+$breakpoint-gt-lg: 'screen and (min-width: 1920px)';
+$breakpoint-height-xs: 'screen and (max-height: 599px)';
 
 :export {
   containerWidth: $container;
+  headerWidth: $header;
+  bodyWidth: $container-body;
 }
