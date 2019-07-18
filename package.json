@@ -29,7 +29,7 @@
     "react-collapsible": "^2.5.0",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
-    "typeface-clear-sans": "^0.0.44",
+    "typeface-fira-sans": "^0.0.75",
     "typeface-montserrat": "0.0.43"
   },
   "keywords": [

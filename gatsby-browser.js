@@ -6,4 +6,4 @@
 
 // custom typefaces
 import 'typeface-montserrat';
-import 'typeface-clear-sans';
+import 'typeface-fira-sans';
