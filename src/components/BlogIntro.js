@@ -37,12 +37,7 @@ const BlogIntro = () => (
           }}
         >
           <p>
-            Written by <strong>{author}</strong> who lives and works in Toronto
-            building useful things.
-            {` `}
-            <a href={`https://www.instagram.com/${social.instagram}`}>
-              You should follow him on Instagram.
-            </a>
+            Written by <strong>{author}</strong> - currently in Toronto.
           </p>
         </div>
       );

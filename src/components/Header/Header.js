@@ -40,14 +40,14 @@ const Header = () => (
           </Link>
         </div>
       </div>
-      <div className={`${styles.headerContent}`}>
-        <h6>Find me on: </h6>
-        <div className="layout--grid-row">
-          <p>hey asdasd</p>
-          <p>hey asdasd</p>
-          <p>hey asdasd</p>
-          <p>hey asdasd</p>
-        </div>
+
+      <div className={`layout--grid-row ${styles.headerContent}`}>
+        <p>hey</p>
+        <p>hey</p>
+      </div>
+      <div className={`layout--grid-row ${styles.headerContent}`}>
+        <p>hey</p>
+        <p>hey</p>
       </div>
     </div>
   </div>
