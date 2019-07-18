@@ -10,9 +10,9 @@ import image from './logo.png';
 const Header = () => (
   <div className={`${styles.container}`}>
     <div className={`${styles.header}`}>
-      <div className={`${styles.headerContent}`}>
+      <div className={`${styles.headerLinks}`}>
         <Link to="/">
-          <img src={image} alt="logo" style={{ height: 40, width: 40 }} />
+          <img src={image} alt="logo" className={`${styles.headerImage}`} />
         </Link>
         <div className={styles.linkContainer}>
           <Link
@@ -38,6 +38,15 @@ const Header = () => (
           >
             work
           </Link>
+        </div>
+      </div>
+      <div className={`${styles.headerContent}`}>
+        <h6>Find me on: </h6>
+        <div className="layout--grid-row">
+          <p>hey asdasd</p>
+          <p>hey asdasd</p>
+          <p>hey asdasd</p>
+          <p>hey asdasd</p>
         </div>
       </div>
     </div>
