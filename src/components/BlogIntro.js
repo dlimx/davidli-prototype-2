@@ -36,14 +36,6 @@ const BlogIntro = () => (
             paddingTop: 20,
           }}
         >
-          <Image
-            fixed={data.avatar.childImageSharp.fixed}
-            alt={author}
-            style={{
-              borderRadius: '50%',
-              marginRight: 20,
-            }}
-          />
           <p>
             Written by <strong>{author}</strong> who lives and works in Toronto
             building useful things.

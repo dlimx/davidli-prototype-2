@@ -24,7 +24,8 @@ export default class BlogPreview extends Component {
       <div key={post.fields.slug}>
         <h3
           style={{
-            marginBottom: 16,
+            marginTop: 16,
+            marginBottom: 0,
           }}
         >
           <Link

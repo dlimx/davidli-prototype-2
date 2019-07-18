@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 
-import '../theme/reset.css';
-import '../theme/base.scss';
-import variables from '../theme/_Variables.scss';
+import '../theme/theme.scss';
 
 import Header from './Header/Header';
 

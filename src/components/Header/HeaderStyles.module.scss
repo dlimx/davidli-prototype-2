@@ -1,5 +1,4 @@
-@import '_Variables';
-@import '_Colors';
+@import 'theme';
 
 .container {
   position: relative;
@@ -55,10 +54,12 @@
 }
 
 .link {
-  color: $color-primary-500;
+  color: $color-secondary-500;
   text-decoration: none;
   padding: 3px 0;
   margin: 1rem 0;
+  font-family: $font-header;
+  transition: color 0.1s ease;
 
   @media #{$breakpoint-lt-md} {
     flex-direction: row;
@@ -68,12 +69,18 @@
 }
 
 .link:hover {
-  color: $color-primary-100;
+  color: $color-secondary-100;
 }
 
 .linkActive {
+  color: $color-primary-500;
   border-bottom: 3px solid $color-primary-500;
   padding-bottom: 0px;
+}
+
+.linkActive:hover {
+  color: $color-primary-100;
+  border-bottom: 3px solid $color-primary-100;
 }
 
 .linkContainer {
