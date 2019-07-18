@@ -4,7 +4,7 @@ import { graphql, withPrefix, Link } from 'gatsby';
 
 import constants from '../constants';
 
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
 class AboutIndex extends Component {
