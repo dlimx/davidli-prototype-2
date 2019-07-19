@@ -1,8 +1,8 @@
 // Base Variables
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-$font-body: 'Fira Sans';
-$font-header: 'Montserrat';
+$font-body: 'Fira Sans', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+$font-header: 'Brandon Grotesque', sans-serif;
 
 $color-white: #fff;
 $color-grey: #6d6d6d;
@@ -16,7 +16,7 @@ $color-black: #0b0b0b;
 $color-text: $color-grey-700;
 $color-text-white: $color-white;
 $color-text-light: $color-grey-300;
-$color-text-header: $color-grey-300;
+$color-text-header: $color-grey-500;
 
 $color-background: #f8f8f8;
 
@@ -106,8 +106,7 @@ html {
 // Default body styles
 body {
   color: $color-text;
-  font-family: $font-body, 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial',
-    sans-serif;
+  font-family: $font-body;
   font-size: 1.6em; // Currently ems cause chrome bug misinterpreting rems on body element
   font-weight: 300;
   letter-spacing: 0.01em;
@@ -118,24 +117,6 @@ body {
     font-size: 2.0em;
   }
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $font-header, sans-serif;
-}
-
-
-// Image
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
-
-img {
-	max-width: 100%;
-}
-
 
 // Typography
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -151,23 +132,26 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 300;
+  font-weight: 900;
   margin-bottom: 2rem;
   margin-top: 0;
+  font-family: $font-header;
+  text-transform: uppercase;
+  color: $color-text-header;
+  line-height: 1.2;
 }
 
 h1 {
   font-size: 3.2rem;
-  color: $color-text-header;
 
   @media #{$breakpoint-gt-md} {
-    font-size: 5.2rem;
+    font-size: 6.0rem;
+    letter-spacing: 4px;
   }
 }
 
 h2 {
   font-size: 2.8rem;
-  color: $color-text-header;
 
   @media #{$breakpoint-gt-md} {
     font-size: 4.8rem;
@@ -176,7 +160,6 @@ h2 {
 
 h3 {
   font-size: 2.4rem;
-  color: $color-text-header;
 
   @media #{$breakpoint-gt-md} {
     font-size: 4.2rem;
@@ -185,7 +168,6 @@ h3 {
 
 h4 {
   font-size: 2.2rem;
-  color: $color-text-header;
 
   @media #{$breakpoint-gt-md} {
     font-size: 3.2rem;
@@ -194,15 +176,12 @@ h4 {
 
 h5 {
   font-size: 2rem;
-  color: $color-text-header;
-
   @media #{$breakpoint-gt-md} {
     font-size: 2.8rem;
   }
 }
 
 h6 {
-  color: $color-text-header;
 
   @media #{$breakpoint-gt-md} {
     font-size: 2.4rem;
@@ -218,6 +197,15 @@ small {
 }
 
 
+// Image
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+img {
+	max-width: 100%;
+}
+
+
+
 // Link
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -229,6 +217,13 @@ a {
 	&:hover {
 		color: $color-secondary-100;
 	}
+}
+
+.header-link {
+  color: $color-text-header;
+  font-weight: 900;
+  font-family: $font-header;
+  text-transform: uppercase;
 }
 
 .link-header {

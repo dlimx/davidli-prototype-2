@@ -18,7 +18,7 @@ const Header = () => (
         <div className={styles.linkContainer}>
           <Link
             to="/"
-            className={styles.link}
+            className={`header-link ${styles.link}`}
             activeClassName={styles.linkActive}
           >
             About
@@ -26,7 +26,7 @@ const Header = () => (
           {constants.blogActive && (
             <Link
               to="/stories/"
-              className={styles.link}
+              className={`header-link ${styles.link}`}
               activeClassName={styles.linkActive}
             >
               Stories
@@ -34,7 +34,7 @@ const Header = () => (
           )}
           <Link
             to="/work/"
-            className={styles.link}
+            className={`header-link ${styles.link}`}
             activeClassName={styles.linkActive}
           >
             Work

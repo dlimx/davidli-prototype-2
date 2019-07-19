@@ -22,7 +22,9 @@ class AboutIndex extends Component {
           title="Home"
           keywords={[`gatsby`, `application`, `react`, `david`]}
         />
-        <h1>Hey, I&#39;m David</h1>
+        <h1>
+          Hi - I&#39;m <span style={{}}>David</span>
+        </h1>
         <p>
           I am a software engineer currently at{' '}
           <a href="https://quartermaster.com">Quartermaster</a>.

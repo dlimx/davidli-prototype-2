@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 
+import '../theme/fonts/fonts.css';
 import '../theme/theme.scss';
 
 import Header from './Header/Header';
