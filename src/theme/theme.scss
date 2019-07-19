@@ -16,7 +16,7 @@ $color-black: #0b0b0b;
 $color-text: $color-grey-700;
 $color-text-white: $color-white;
 $color-text-light: $color-grey-300;
-$color-text-header: $color-grey-500;
+$color-text-header: $color-grey-700;
 
 $color-background: #f8f8f8;
 
@@ -71,20 +71,18 @@ hr {
 // Breakpoints
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-$container: 1080px;
-$header: 240px;
-$header-height: 80px;
-$container-body: 840px;
+$container: 960px;
+$header-height: 60px;
 
 $breakpoint-xs: 'screen and (max-width: 599px)';
 $breakpoint-gt-xs: 'screen and (min-width: 600px)';
 $breakpoint-sm: 'screen and (min-width: 600px) and (max-width: 959px)';
 $breakpoint-lt-sm: 'screen and (max-width: 959px)';
 $breakpoint-gt-sm: 'screen and (min-width: 960px)';
-$breakpoint-md: 'screen and (min-width: 960px) and (max-width: 1079px)';
-$breakpoint-lt-md: 'screen and (max-width: 1079px)';
-$breakpoint-gt-md: 'screen and (min-width: 1080px)';
-$breakpoint-lg: 'screen and (min-width: 1080px) and (max-width: 1919px)';
+$breakpoint-md: 'screen and (min-width: 960px) and (max-width: 1199px)';
+$breakpoint-lt-md: 'screen and (max-width: 1199px)';
+$breakpoint-gt-md: 'screen and (min-width: 1200px)';
+$breakpoint-lg: 'screen and (min-width: 1200px) and (max-width: 1919px)';
 $breakpoint-xl: 'screen and (min-width: 1920px)';
 $breakpoint-height-xs: 'screen and (max-height: 599px)';
 
@@ -132,13 +130,13 @@ h3,
 h4,
 h5,
 h6 {
+  color: $color-text-header;
+  font-family: $font-header;
   font-weight: 900;
+  line-height: 1.2;
   margin-bottom: 2rem;
   margin-top: 0;
-  font-family: $font-header;
   text-transform: uppercase;
-  color: $color-text-header;
-  line-height: 1.2;
 }
 
 h1 {
@@ -146,7 +144,6 @@ h1 {
 
   @media #{$breakpoint-gt-md} {
     font-size: 6.0rem;
-    letter-spacing: 4px;
   }
 }
 
@@ -246,7 +243,7 @@ a {
 
 .layout--container {
   margin: 0 auto;
-  max-width: $container-body;
+  max-width: $container;
   padding: $padding-2 $padding-2;
 
   @media #{$breakpoint-gt-sm} {

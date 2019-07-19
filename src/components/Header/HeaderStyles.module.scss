@@ -1,76 +1,45 @@
 @import 'theme';
 
-.container {
-  position: relative;
-
-  @media #{$breakpoint-gt-md} {
-    width: $header;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  @media #{$breakpoint-lt-md} {
-    height: $header-height;
-    width: 100%;
-  }
-}
-
 .header {
   position: fixed;
-  overflow: auto;
-  overscroll-behavior: contain;
-
-  @media #{$breakpoint-gt-md} {
-    top: 35%;
-    transform: translateY(-50%);
-  }
-
-  @media #{$breakpoint-lt-md} {
-    width: 100%;
-    background-color: #ffffff;
-    border-bottom: 1px solid  $color-grey-100;
-  }
+  overflow: hidden;
+  width: 100%;
+  height: $header-height;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
 }
 
 .headerImage {
-  height: 40px;
-  width: 40px;
+  height: 32px;
+  width: 32px;
 
-  @media #{$breakpoint-gt-md} {
-    height: 60px;
-    width: 60px;
+  @media #{$breakpoint-gt-sm} {
+    height: 40px;
+    width: 40px;
   }
 }
 
 .headerLinks {
-  padding: $padding $padding-2;
+  height: $header-height;
   display: flex;
+  align-items: center;
+  padding: 0 $padding-2;
 
-  @media #{$breakpoint-gt-md} {
-    padding: $padding-2 $padding-3 $padding $padding-2;
-    width: $header;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  @media #{$breakpoint-lt-md} {
-    height: $header-height;
-    max-width: $container-body;
-    margin: 0 auto;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
+  @media #{$breakpoint-lt-sm} {
+    display: none;
   }
 }
 
 .link {
   color: $color-secondary-500;
   text-decoration: none;
-  padding: $padding-half 0;
+  padding: $padding-half;
+  margin: 0 0 0 $padding;
   font-family: $font-header;
   transition: color 0.1s ease;
 
-  @media #{$breakpoint-lt-md} {
+  @media #{$breakpoint-lt-sm} {
     flex-direction: row;
     align-items: center;
     margin: 1rem 1rem;
@@ -91,29 +60,5 @@
 
 .linkContainer {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-
-  @media #{$breakpoint-lt-md} {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-
-.headerContent {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  padding: 0 $padding-3;
-  width: $header;
-
-  @media #{$breakpoint-lt-md} {
-    display: none;
-  }
-}
-
-.headerContentIcon {
-  padding: $padding-half 0 $padding-half $padding-half;
-  display: flex;
-  justify-content: flex-end;
+  align-items: center;
 }

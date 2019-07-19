@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { graphql, withPrefix, Link } from 'gatsby';
 
-import constants from '../constants';
+import theme from '../theme/theme.scss';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -14,8 +14,6 @@ class AboutIndex extends Component {
   };
 
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges;
-
     return (
       <Layout>
         <SEO
@@ -23,7 +21,7 @@ class AboutIndex extends Component {
           keywords={[`gatsby`, `application`, `react`, `david`]}
         />
         <h1>
-          Hi - I&#39;m <span style={{}}>David</span>
+          Hi - I&#39;m <span style={{ color: theme.colorPrimary }}>David</span>
         </h1>
         <p>
           I am a software engineer currently at{' '}

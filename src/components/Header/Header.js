@@ -6,64 +6,37 @@ import constants from '../../constants/index';
 
 import styles from './HeaderStyles.module.scss';
 import image from './logo.png';
-import Icon from '../Icon';
 
 const Header = () => (
-  <div className={`${styles.container}`}>
-    <div className={`${styles.header}`}>
-      <div className={`${styles.headerLinks}`}>
-        <Link to="/">
-          <img src={image} alt="logo" className={`${styles.headerImage}`} />
+  <div className={`${styles.header}`}>
+    <div className={`main--container ${styles.headerLinks}`}>
+      <Link to="/" className={`${styles.headerImage}`}>
+        <img src={image} alt="logo" className={`${styles.headerImage}`} />
+      </Link>
+      <div className={styles.linkContainer}>
+        <Link
+          to="/"
+          className={`header-link ${styles.link}`}
+          activeClassName={styles.linkActive}
+        >
+          About
         </Link>
-        <div className={styles.linkContainer}>
+        {constants.blogActive && (
           <Link
-            to="/"
+            to="/stories/"
             className={`header-link ${styles.link}`}
             activeClassName={styles.linkActive}
           >
-            About
+            Stories
           </Link>
-          {constants.blogActive && (
-            <Link
-              to="/stories/"
-              className={`header-link ${styles.link}`}
-              activeClassName={styles.linkActive}
-            >
-              Stories
-            </Link>
-          )}
-          <Link
-            to="/work/"
-            className={`header-link ${styles.link}`}
-            activeClassName={styles.linkActive}
-          >
-            Work
-          </Link>
-        </div>
-      </div>
-
-      <div className={`${styles.headerContent}`}>
-        <a
-          className={`${styles.headerContentIcon}`}
-          title="Email"
-          href="mailto:me@davidli.io?subject=Hello!"
+        )}
+        <Link
+          to="/work/"
+          className={`header-link ${styles.link}`}
+          activeClassName={styles.linkActive}
         >
-          <Icon size={24} name="MdMail" />
-        </a>
-        <a
-          className={`${styles.headerContentIcon}`}
-          title="LinkedIn"
-          href="https://www.linkedin.com/in/dlimx/"
-        >
-          <Icon size={26} name="LogoLinkedin" />
-        </a>
-        <a
-          className={`${styles.headerContentIcon}`}
-          title="Instagram"
-          href="https://www.instagram.com/dli.mx/"
-        >
-          <Icon size={26} name="LogoInstagram" />
-        </a>
+          Work
+        </Link>
       </div>
     </div>
   </div>
