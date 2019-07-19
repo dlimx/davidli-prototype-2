@@ -6,6 +6,7 @@ import constants from '../../constants/index';
 
 import styles from './HeaderStyles.module.scss';
 import image from './logo.png';
+import Icon from '../Icon';
 
 const Header = () => (
   <div className={`${styles.container}`}>
@@ -20,7 +21,7 @@ const Header = () => (
             className={styles.link}
             activeClassName={styles.linkActive}
           >
-            about
+            About
           </Link>
           {constants.blogActive && (
             <Link
@@ -28,7 +29,7 @@ const Header = () => (
               className={styles.link}
               activeClassName={styles.linkActive}
             >
-              stories
+              Stories
             </Link>
           )}
           <Link
@@ -36,18 +37,33 @@ const Header = () => (
             className={styles.link}
             activeClassName={styles.linkActive}
           >
-            work
+            Work
           </Link>
         </div>
       </div>
 
-      <div className={`layout--grid-row ${styles.headerContent}`}>
-        <p>hey</p>
-        <p>hey</p>
-      </div>
-      <div className={`layout--grid-row ${styles.headerContent}`}>
-        <p>hey</p>
-        <p>hey</p>
+      <div className={`${styles.headerContent}`}>
+        <a
+          className={`${styles.headerContentIcon}`}
+          title="Email"
+          href="mailto:me@davidli.io?subject=Hello!"
+        >
+          <Icon size={24} name="MdMail" />
+        </a>
+        <a
+          className={`${styles.headerContentIcon}`}
+          title="LinkedIn"
+          href="https://www.linkedin.com/in/dlimx/"
+        >
+          <Icon size={26} name="LogoLinkedin" />
+        </a>
+        <a
+          className={`${styles.headerContentIcon}`}
+          title="Instagram"
+          href="https://www.instagram.com/dli.mx/"
+        >
+          <Icon size={26} name="LogoInstagram" />
+        </a>
       </div>
     </div>
   </div>
