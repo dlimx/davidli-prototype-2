@@ -13,6 +13,7 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         includePaths: [`${__dirname}/src/theme`],
+        useResolveUrlLoader: true,
       },
     },
     `gatsby-plugin-react-helmet`,
