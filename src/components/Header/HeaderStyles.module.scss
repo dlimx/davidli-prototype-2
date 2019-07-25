@@ -27,7 +27,8 @@
   padding: 0 $padding-2;
 
   @media #{$breakpoint-lt-sm} {
-    display: none;
+    padding: 0 $padding;
+    justify-content: space-between;
   }
 }
 
@@ -42,7 +43,7 @@
   @media #{$breakpoint-lt-sm} {
     flex-direction: row;
     align-items: center;
-    margin: 1rem 1rem;
+    margin: 0;
   }
 }
 
