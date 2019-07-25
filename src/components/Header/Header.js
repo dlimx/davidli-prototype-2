@@ -2,21 +2,22 @@ import React from 'react';
 import { Link } from 'gatsby';
 // import PropTypes from 'prop-types';
 
+import classNames from 'classnames';
+import styles from './HeaderStyles.module.scss';
 import constants from '../../constants/index';
 
-import styles from './HeaderStyles.module.scss';
 import image from './logo.png';
 
 const Header = () => (
-  <div className={`${styles.header}`}>
-    <div className={`main--container ${styles.headerLinks}`}>
+  <div className={classNames(styles.header)}>
+    <div className={classNames('main--container', styles.headerLinks)}>
       <Link to="/" className={`${styles.headerImage}`}>
         <img src={image} alt="logo" className={`${styles.headerImage}`} />
       </Link>
       <div className={styles.linkContainer}>
         <Link
           to="/"
-          className={`header-link ${styles.link}`}
+          className={classNames('header-link', styles.link)}
           activeClassName={styles.linkActive}
         >
           About
@@ -24,7 +25,7 @@ const Header = () => (
         {constants.blogActive && (
           <Link
             to="/stories/"
-            className={`header-link ${styles.link}`}
+            className={classNames('header-link', styles.link)}
             activeClassName={styles.linkActive}
           >
             Stories
@@ -32,7 +33,7 @@ const Header = () => (
         )}
         <Link
           to="/work/"
-          className={`header-link ${styles.link}`}
+          className={classNames('header-link', styles.link)}
           activeClassName={styles.linkActive}
         >
           Work

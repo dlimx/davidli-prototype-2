@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { graphql, withPrefix, Link } from 'gatsby';
 
+import classNames from 'classnames';
 import theme from '../theme/theme.scss';
 import styles from './AboutStyles.module.scss';
 
@@ -83,10 +84,7 @@ class AboutIndex extends Component {
             <Link to="/about/dinner-club/">Our dinners →</Link>
           </div>
           <div className={`${styles.imagePlaceholder}`} />
-          <img
-            src={profile}
-            className={`${styles.image} ${styles.imagePlaceholder}`}
-          />
+          <img className={classNames(styles.image, styles.imagePlaceholder)} />
         </div>
       </Layout>
     );
