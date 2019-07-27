@@ -6,3 +6,6 @@
 
 // custom typefaces
 import 'typeface-fira-sans';
+
+import './src/theme/fonts/fonts.css';
+import './src/theme/theme.scss';

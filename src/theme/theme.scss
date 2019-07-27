@@ -103,6 +103,7 @@ html {
 
 // Default body styles
 body {
+  margin: 0;
   color: $color-text;
   font-family: $font-body;
   font-size: 1.6em; // Currently ems cause chrome bug misinterpreting rems on body element
