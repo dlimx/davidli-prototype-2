@@ -3,7 +3,7 @@
 .placeholder {
   height: 0px;
 
-  @media #{$breakpoint-gt-sm} {
+  @media #{$breakpoint-gt-md} {
     height: 200px;
   }
 }

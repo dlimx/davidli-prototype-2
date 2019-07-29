@@ -74,24 +74,25 @@ $container: 960px;
 $header-height: 60px;
 
 $sm-value: 600;
+$md-value: 960;
 
 $xs: 599px;
 $sm: $sm-value + px;
 $ltmd: 959px;
-$md: 960px;
+$md: $md-value + px;
 $ltlg: 1199px;
 $lg: 1200px;
 $ltxl: 1919x;
 $xl: 1920px;
 
 $breakpoint-xs: 'screen and (max-width: #{$xs})';
-$breakpoint-gt-xs: 'screen and (min-width: #{$sm})';
+$breakpoint-gt-sm: 'screen and (min-width: #{$sm})';
 $breakpoint-sm: 'screen and (min-width: #{$sm}) and (max-width: #{ltmd})';
-$breakpoint-lt-sm: 'screen and (max-width: #{$ltmd})';
-$breakpoint-gt-sm: 'screen and (min-width: #{$md})';
+$breakpoint-lt-md: 'screen and (max-width: #{$ltmd})';
+$breakpoint-gt-md: 'screen and (min-width: #{$md})';
 $breakpoint-md: 'screen and (min-width: #{$md}) and (max-width: #{$ltlg})';
 $breakpoint-lt-lg: 'screen and (max-width: #{$ltlg})';
-$breakpoint-gt-md: 'screen and (min-width: #{lg})';
+$breakpoint-gt-lg: 'screen and (min-width: #{lg})';
 $breakpoint-lg: 'screen and (min-width: #{$ltxl}) and (max-width: #{$xl})';
 $breakpoint-xl: 'screen and (min-width: #{$xl})';
 $breakpoint-height-xs: 'screen and (max-height: 599px)';
@@ -121,7 +122,7 @@ body {
   letter-spacing: 0.01em;
   line-height: 1.8;
 
-  @media #{$breakpoint-gt-sm} {
+  @media #{$breakpoint-gt-md} {
     font-size: 2em;
   }
 }
@@ -152,7 +153,7 @@ h6 {
 h1 {
   font-size: 3.2rem;
 
-  @media #{$breakpoint-gt-sm} {
+  @media #{$breakpoint-gt-md} {
     font-size: 6rem;
   }
 }
@@ -160,7 +161,7 @@ h1 {
 h2 {
   font-size: 2.8rem;
 
-  @media #{$breakpoint-gt-sm} {
+  @media #{$breakpoint-gt-md} {
     font-size: 4.8rem;
   }
 }
@@ -168,7 +169,7 @@ h2 {
 h3 {
   font-size: 2.4rem;
 
-  @media #{$breakpoint-gt-sm} {
+  @media #{$breakpoint-gt-md} {
     font-size: 4.2rem;
   }
 }
@@ -176,20 +177,20 @@ h3 {
 h4 {
   font-size: 2.2rem;
 
-  @media #{$breakpoint-gt-sm} {
+  @media #{$breakpoint-gt-md} {
     font-size: 3.2rem;
   }
 }
 
 h5 {
   font-size: 2rem;
-  @media #{$breakpoint-gt-sm} {
+  @media #{$breakpoint-gt-md} {
     font-size: 2.8rem;
   }
 }
 
 h6 {
-  @media #{$breakpoint-gt-sm} {
+  @media #{$breakpoint-gt-md} {
     font-size: 2.4rem;
   }
 }
@@ -250,7 +251,7 @@ a {
   max-width: $container;
   padding: $padding-2 $padding-2;
 
-  @media #{$breakpoint-gt-sm} {
+  @media #{$breakpoint-gt-md} {
     padding: $padding-4 $padding-2;
   }
 }
@@ -267,7 +268,7 @@ a {
   flex-direction: row;
   position: relative;
   width: '100%';
-  @media #{$breakpoint-lt-sm} {
+  @media #{$breakpoint-lt-md} {
     flex-direction: column;
     align-items: center;
   }
@@ -337,4 +338,5 @@ a {
   colorQuaternary700: $color-quaternary-700;
 
   smValue: $sm-value;
+  mdValue: $md-value;
 }

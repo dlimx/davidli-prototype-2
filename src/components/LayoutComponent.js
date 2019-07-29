@@ -19,37 +19,35 @@ class LayoutComponent extends Component {
   render() {
     const { data, children, width } = this.props;
 
-    return (
-      <div>
-        <StickyContainer>
-          <div className={styles.placeholder} />
-          <Sticky
-            topOffset={
-              width > Number.parseInt(theme.smValue, 10)
-                ? this.defaultOffset
-                : 0
-            }
-          >
-            {({
-              style,
+    console.log(width, theme.smValue);
 
-              // the following are also available but unused in this example
-              isSticky,
-              wasSticky,
-              distanceFromTop,
-              distanceFromBottom,
-              calculatedHeight,
-            }) => (
-              <header style={style}>
-                <Header siteTitle={data.site.siteMetadata.title} />
-              </header>
-            )}
-          </Sticky>
-          <div className="layout--grid-row main--container">
-            <div className="layout--container">{children}</div>
-          </div>
-        </StickyContainer>
-      </div>
+    return (
+      <StickyContainer>
+        <div className={styles.placeholder} />
+        <Sticky
+          topOffset={
+            width > Number.parseInt(theme.mdValue, 10) ? this.defaultOffset : 0
+          }
+        >
+          {({
+            style,
+
+            // the following are also available but unused in this example
+            isSticky,
+            wasSticky,
+            distanceFromTop,
+            distanceFromBottom,
+            calculatedHeight,
+          }) => (
+            <header style={style}>
+              <Header siteTitle={data.site.siteMetadata.title} />
+            </header>
+          )}
+        </Sticky>
+        <div className="main--container">
+          <div className="layout--container">{children}</div>
+        </div>
+      </StickyContainer>
     );
   }
 }

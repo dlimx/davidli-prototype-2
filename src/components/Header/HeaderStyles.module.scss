@@ -13,7 +13,7 @@
   height: 32px;
   width: 32px;
 
-  @media #{$breakpoint-gt-sm} {
+  @media #{$breakpoint-gt-md} {
     height: 40px;
     width: 40px;
   }
@@ -25,7 +25,7 @@
   align-items: center;
   padding: 0 $padding-2;
 
-  @media #{$breakpoint-lt-sm} {
+  @media #{$breakpoint-lt-md} {
     padding: 0 $padding;
     justify-content: space-between;
   }
@@ -39,7 +39,7 @@
   font-family: $font-header;
   transition: color 0.1s ease;
 
-  @media #{$breakpoint-lt-sm} {
+  @media #{$breakpoint-lt-md} {
     flex-direction: row;
     align-items: center;
     margin: 0;
