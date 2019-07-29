@@ -1,7 +1,8 @@
 // Base Variables
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-$font-body: 'Fira Sans', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+$font-body: 'Fira Sans', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial',
+  sans-serif;
 $font-header: 'Brandon Grotesque', sans-serif;
 
 $color-white: #fff;
@@ -28,11 +29,11 @@ $color-primary-100: #91e6fc;
 $color-primary-300: #72dff8;
 $color-primary-500: $color-primary;
 $color-primary-700: #44b1ce;
-$color-primary-900: #358AA0;
+$color-primary-900: #358aa0;
 
 $color-secondary: #416e8b;
 $color-secondary-100: #799db4;
-$color-secondary-300: #5785A1;
+$color-secondary-300: #5785a1;
 $color-secondary-500: $color-secondary;
 $color-secondary-700: #5785a1;
 $color-secondary-900: #274253;
@@ -43,7 +44,7 @@ $color-tertiary-500: $color-tertiary;
 $color-tertiary-700: #d14069;
 
 $color-quaternary: #292b3d;
-$color-quaternary-300: #383B53;
+$color-quaternary-300: #383b53;
 $color-quaternary-500: $color-quaternary;
 $color-quaternary-700: #1a1b26;
 
@@ -52,7 +53,6 @@ $color-text-secondary: $color-secondary-700;
 
 $color-background-primary: #b0edfd;
 $color-background-secondary: #abc0d0;
-
 
 // Spacing
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -67,23 +67,33 @@ hr {
   margin: $padding-4 0;
 }
 
-
 // Breakpoints
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 $container: 960px;
 $header-height: 60px;
 
-$breakpoint-xs: 'screen and (max-width: 599px)';
-$breakpoint-gt-xs: 'screen and (min-width: 600px)';
-$breakpoint-sm: 'screen and (min-width: 600px) and (max-width: 959px)';
-$breakpoint-lt-sm: 'screen and (max-width: 959px)';
-$breakpoint-gt-sm: 'screen and (min-width: 960px)';
-$breakpoint-md: 'screen and (min-width: 960px) and (max-width: 1199px)';
-$breakpoint-lt-md: 'screen and (max-width: 1199px)';
-$breakpoint-gt-md: 'screen and (min-width: 1200px)';
-$breakpoint-lg: 'screen and (min-width: 1200px) and (max-width: 1919px)';
-$breakpoint-xl: 'screen and (min-width: 1920px)';
+$sm-value: 600;
+
+$xs: 599px;
+$sm: $sm-value + px;
+$ltmd: 959px;
+$md: 960px;
+$ltlg: 1199px;
+$lg: 1200px;
+$ltxl: 1919x;
+$xl: 1920px;
+
+$breakpoint-xs: 'screen and (max-width: #{$xs})';
+$breakpoint-gt-xs: 'screen and (min-width: #{$sm})';
+$breakpoint-sm: 'screen and (min-width: #{$sm}) and (max-width: #{ltmd})';
+$breakpoint-lt-sm: 'screen and (max-width: #{$ltmd})';
+$breakpoint-gt-sm: 'screen and (min-width: #{$md})';
+$breakpoint-md: 'screen and (min-width: #{$md}) and (max-width: #{$ltlg})';
+$breakpoint-lt-lg: 'screen and (max-width: #{$ltlg})';
+$breakpoint-gt-md: 'screen and (min-width: #{lg})';
+$breakpoint-lg: 'screen and (min-width: #{$ltxl}) and (max-width: #{$xl})';
+$breakpoint-xl: 'screen and (min-width: #{$xl})';
 $breakpoint-height-xs: 'screen and (max-height: 599px)';
 
 // The base font-size is set at 62.5% for having the convenience
@@ -111,9 +121,8 @@ body {
   letter-spacing: 0.01em;
   line-height: 1.8;
 
-
   @media #{$breakpoint-gt-sm} {
-    font-size: 2.0em;
+    font-size: 2em;
   }
 }
 
@@ -144,7 +153,7 @@ h1 {
   font-size: 3.2rem;
 
   @media #{$breakpoint-gt-sm} {
-    font-size: 6.0rem;
+    font-size: 6rem;
   }
 }
 
@@ -180,7 +189,6 @@ h5 {
 }
 
 h6 {
-
   @media #{$breakpoint-gt-sm} {
     font-size: 2.4rem;
   }
@@ -194,27 +202,24 @@ small {
   color: $color-text-light;
 }
 
-
 // Image
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 img {
-	max-width: 100%;
+  max-width: 100%;
 }
-
-
 
 // Link
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 a {
-	color: $color-secondary;
-	text-decoration: none;
+  color: $color-secondary;
+  text-decoration: none;
 
-	&:focus,
-	&:hover {
-		color: $color-secondary-100;
-	}
+  &:focus,
+  &:hover {
+    color: $color-secondary-100;
+  }
 }
 
 .header-link {
@@ -232,14 +237,12 @@ a {
   color: $color-text;
 }
 
-
 // Grid
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .main--container {
   margin: 0 auto;
   max-width: $container;
-
 }
 
 .layout--container {
@@ -276,7 +279,6 @@ a {
   position: relative;
 }
 
-
 // Exports
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -284,12 +286,12 @@ a {
   colorWhite: $color-white;
   colorGrey: $color-grey;
   colorGrey100: $color-grey-100;
-  colorGrey300:$color-grey-300;
-  colorGrey500:$color-grey-500;
-  colorGrey700:$color-grey-700;
-  colorGrey900:$color-grey-900;
+  colorGrey300: $color-grey-300;
+  colorGrey500: $color-grey-500;
+  colorGrey700: $color-grey-700;
+  colorGrey900: $color-grey-900;
   colorBlack: $color-black;
-  
+
   colorText: $color-text;
   colorTextWhite: $color-text-white;
   colorTextLight: $color-text-light;
@@ -300,7 +302,7 @@ a {
   colorBackground: $color-background;
   colorBackgroundPrimary: $color-background-primary;
   colorBackgroundSecondary: $color-background-secondary;
-  
+
   fontBody: $font-body;
   fontHeader: $font-header;
 
@@ -316,21 +318,23 @@ a {
   colorPrimary500: $color-primary-500;
   colorPrimary700: $color-primary-700;
   colorPrimary900: $color-primary-900;
-  
+
   colorSecondary: $color-secondary;
   colorSecondary100: $color-secondary-100;
   colorSecondary300: $color-secondary-300;
   colorSecondary500: $color-secondary-500;
   colorSecondary700: $color-secondary-700;
   colorSecondary900: $color-secondary-900;
-  
+
   colorTertiary: $color-tertiary;
   colorTertiary300: $color-tertiary-300;
   colorTertiary500: $color-tertiary-500;
   colorTertiary700: $color-tertiary-700;
-  
+
   colorQuaternary: $color-quaternary;
   colorQuaternary300: $color-quaternary-300;
   colorQuaternary500: $color-quaternary-500;
   colorQuaternary700: $color-quaternary-700;
+
+  smValue: $sm-value;
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
 import LayoutComponent from './LayoutComponent';
+import ThemeContext from '../context/ThemeContext';
 
 class Layout extends Component {
   render() {
@@ -16,7 +17,17 @@ class Layout extends Component {
             }
           }
         `}
-        render={data => <LayoutComponent {...this.props} data={data} />}
+        render={data => (
+          <ThemeContext.Consumer>
+            {theme => (
+              <LayoutComponent
+                {...this.props}
+                data={data}
+                width={theme.width}
+              />
+            )}
+          </ThemeContext.Consumer>
+        )}
       />
     );
   }

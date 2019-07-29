@@ -1,0 +1,9 @@
+@import "theme";
+
+.placeholder {
+  height: 0px;
+
+  @media #{$breakpoint-gt-sm} {
+    height: 200px;
+  }
+}

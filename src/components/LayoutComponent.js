@@ -1,22 +1,35 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Header from './Header/Header';
 import { StickyContainer, Sticky } from 'react-sticky';
+import Header from './Header/Header';
 
-export class LayoutComponent extends Component {
+import theme from '../theme/theme.scss';
+import styles from './LayoutComponent.module.scss';
+
+class LayoutComponent extends Component {
   static propTypes = {
     data: PropTypes.object.isRequired,
     children: PropTypes.node.isRequired,
+    width: PropTypes.number.isRequired,
   };
 
+  defaultOffset = 200;
+
   render() {
-    const { data, children } = this.props;
+    const { data, children, width } = this.props;
+
     return (
       <div>
         <StickyContainer>
-          <div style={{ height: 100 }} />
-          <Sticky topOffset={100}>
+          <div className={styles.placeholder} />
+          <Sticky
+            topOffset={
+              width > Number.parseInt(theme.smValue, 10)
+                ? this.defaultOffset
+                : 0
+            }
+          >
             {({
               style,
 
