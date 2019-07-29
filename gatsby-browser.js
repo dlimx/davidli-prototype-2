@@ -11,9 +11,9 @@ import './src/theme/fonts/fonts.css';
 import './src/theme/theme.scss';
 
 import React from 'react';
-import { ThemeProvider } from './src/context/ThemeContext';
+import { WindowProvider } from './src/context/WindowContext';
 
 /* eslint-disable */
 export const wrapRootElement = ({ element }) => (
-  <ThemeProvider>{element}</ThemeProvider>
+  <WindowProvider>{element}</WindowProvider>
 );

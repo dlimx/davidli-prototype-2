@@ -11,22 +11,24 @@ class LayoutComponent extends Component {
   static propTypes = {
     data: PropTypes.object.isRequired,
     children: PropTypes.node.isRequired,
-    width: PropTypes.number.isRequired,
+    windowContext: PropTypes.shape({
+      width: PropTypes.number.isRequired,
+    }).isRequired,
   };
 
   defaultOffset = 200;
 
   render() {
-    const { data, children, width } = this.props;
-
-    console.log(width, theme.smValue);
+    const { data, children, windowContext } = this.props;
 
     return (
       <StickyContainer>
         <div className={styles.placeholder} />
         <Sticky
           topOffset={
-            width > Number.parseInt(theme.mdValue, 10) ? this.defaultOffset : 0
+            windowContext.width > Number.parseInt(theme.mdValue, 10)
+              ? this.defaultOffset
+              : 0
           }
         >
           {({

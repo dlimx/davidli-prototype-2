@@ -1,27 +1,31 @@
 import React, { Component, createContext } from 'react';
 import PropTypes from 'prop-types';
 
-const defaultTheme = {
+const defaultWindow = {
   width: window.innerWidth,
+  scrollY: 0,
 };
 
-const ThemeContext = createContext(defaultTheme);
+const WindowContext = createContext(defaultWindow);
 
-export class ThemeProvider extends Component {
+export class WindowProvider extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
   };
 
   state = {
     width: window.innerWidth,
+    scrollY: 0,
   };
 
   componentDidMount() {
     window.addEventListener('resize', this.setWidth);
+    window.addEventListener('scroll', this.setScroll);
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.setWidth);
+    window.removeEventListener('scroll', this.setScroll);
   }
 
   setWidth = () => {
@@ -30,16 +34,22 @@ export class ThemeProvider extends Component {
     });
   };
 
+  setScroll = () => {
+    this.setState({
+      scrollY: window.pageYOffset,
+    });
+  };
+
   render() {
     const { children } = this.props;
-    const { width } = this.state;
+    const { width, scrollY } = this.state;
 
     return (
-      <ThemeContext.Provider value={{ width }}>
+      <WindowContext.Provider value={{ width, scrollY }}>
         {children}
-      </ThemeContext.Provider>
+      </WindowContext.Provider>
     );
   }
 }
 
-export default ThemeContext;
+export default WindowContext;
