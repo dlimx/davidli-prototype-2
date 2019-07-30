@@ -1,4 +1,4 @@
-@import "theme";
+@import 'theme';
 
 .placeholder {
   height: 0px;
@@ -6,4 +6,12 @@
   @media #{$breakpoint-gt-md} {
     height: 200px;
   }
+}
+
+.rightPlaceholder {
+  height: 100%;
+  width: 30%;
+}
+
+.rightContainer {
 }

@@ -28,7 +28,7 @@ export default class BlogPreview extends Component {
           style={{
             marginTop: 16,
             marginBottom: 0,
-            color: theme.colorSecondary,
+            color: theme.colorTextHeader,
           }}
         >
           {title}
@@ -37,6 +37,7 @@ export default class BlogPreview extends Component {
         <p
           className="link-text"
           dangerouslySetInnerHTML={{ __html: post.excerpt }}
+          style={{ paddingBottom: 32 }}
         />
       </Link>
     );
