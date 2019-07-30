@@ -2,7 +2,7 @@ import React, { Component, createContext } from 'react';
 import PropTypes from 'prop-types';
 
 const defaultWindow = {
-  width: window.innerWidth,
+  width: 0,
   scrollY: 0,
 };
 

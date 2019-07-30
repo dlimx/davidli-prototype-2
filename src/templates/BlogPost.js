@@ -7,6 +7,8 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import BackButton from '../components/BackButton';
 
+import profile from '../../content/assets/profile-pic.jpg';
+
 class BlogPost extends React.Component {
   static propTypes = {
     data: PropTypes.shape({}).isRequired,
@@ -24,7 +26,16 @@ class BlogPost extends React.Component {
     const { previous, next } = pageContext;
 
     return (
-      <Layout location={location} title={siteTitle}>
+      <Layout
+        right={
+          <img
+            src={profile}
+            style={{ height: '100vh', width: '100%', objectFit: 'cover' }}
+          />
+        }
+        location={location}
+        title={siteTitle}
+      >
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <BackButton to="/stories/" />
         <h1>{post.frontmatter.title}</h1>

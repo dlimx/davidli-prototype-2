@@ -6,6 +6,8 @@ import Layout from '../components/Layout';
 import BlogNavigation from '../components/BlogNavigation';
 import BlogPreview from '../components/BlogPreview';
 
+import profile from '../../content/assets/profile-pic.jpg';
+
 export default class BlogList extends React.Component {
   static propTypes = {
     data: PropTypes.shape({}).isRequired,
@@ -16,7 +18,14 @@ export default class BlogList extends React.Component {
     const { data, pageContext } = this.props;
     const posts = data.allMarkdownRemark.edges;
     return (
-      <Layout>
+      <Layout
+        right={
+          <img
+            src={profile}
+            style={{ height: '100vh', width: '100%', objectFit: 'cover' }}
+          />
+        }
+      >
         {posts.map(({ node }) => (
           <BlogPreview post={node} key={node.fields.slug} />
         ))}

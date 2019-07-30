@@ -7,10 +7,19 @@ import Collapsible from 'react-collapsible';
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 
+import profile from '../../../content/assets/IMG_2223-ConvertImage.jpg';
+
 class Ulysses extends Component {
   render() {
     return (
-      <Layout>
+      <Layout
+        right={
+          <img
+            src={profile}
+            style={{ height: '100vh', width: '100%', objectFit: 'cover' }}
+          />
+        }
+      >
         <SEO
           title="Dinner Club"
           keywords={[`work`, `gatsby`, `javascript`, `react`]}

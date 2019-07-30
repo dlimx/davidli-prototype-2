@@ -8,6 +8,8 @@ import SEO from '../components/SEO';
 import BlogNavigation from '../components/BlogNavigation';
 import BlogPreview from '../components/BlogPreview';
 
+import profile from '../../content/assets/profile-pic.jpg';
+
 class BlogIndex extends React.Component {
   static propTypes = {
     location: PropTypes.shape({}).isRequired,
@@ -22,7 +24,16 @@ class BlogIndex extends React.Component {
     const posts = data.allMarkdownRemark.edges;
 
     return (
-      <Layout location={location} title={siteTitle}>
+      <Layout
+        right={
+          <img
+            src={profile}
+            style={{ height: '100vh', width: '100%', objectFit: 'cover' }}
+          />
+        }
+        location={location}
+        title={siteTitle}
+      >
         <SEO
           title="Stories"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}

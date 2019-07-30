@@ -30,13 +30,19 @@ class LayoutComponent extends Component {
     const { data, children, windowContext, right, fixedRight } = this.props;
 
     const isPhone = windowContext.width < Number.parseInt(theme.mdValue, 10);
+    const showRight = !isPhone && !!right;
 
     return (
-      <div className={classNames(!!right && 'layout--grid-row')}>
-        <div style={{ width: !right || isPhone ? '100%' : '70%' }}>
+      <div className={classNames(showRight && 'layout--grid-row')}>
+        <div
+          style={{
+            width: showRight ? '70%' : '100%',
+            paddingLeft: showRight ? '10%' : 0,
+          }}
+        >
           <div className={styles.placeholder} />
           <StickyContainer>
-            <Sticky topOffset={isPhone ? 0 : this.defaultOffset}>
+            <Sticky topOffset={0}>
               {({
                 style,
 
@@ -57,7 +63,7 @@ class LayoutComponent extends Component {
             </div>
           </StickyContainer>
         </div>
-        {!isPhone && !!right && (
+        {showRight && (
           <div className={styles.rightPlaceholder}>
             <div
               className={styles.rightContainer}

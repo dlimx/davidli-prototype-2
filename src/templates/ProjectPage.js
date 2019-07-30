@@ -6,6 +6,8 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import BackButton from '../components/BackButton';
 
+import profile from '../../content/assets/IMG_2223-ConvertImage.jpg';
+
 class ProjectPage extends React.Component {
   static propTypes = {
     data: PropTypes.shape({}).isRequired,
@@ -22,7 +24,16 @@ class ProjectPage extends React.Component {
     const siteTitle = data.site.siteMetadata.title;
 
     return (
-      <Layout location={location} title={siteTitle}>
+      <Layout
+        right={
+          <img
+            src={profile}
+            style={{ height: '100vh', width: '100%', objectFit: 'cover' }}
+          />
+        }
+        location={location}
+        title={siteTitle}
+      >
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <BackButton to="/work/" />
         <h1>{post.frontmatter.title}</h1>

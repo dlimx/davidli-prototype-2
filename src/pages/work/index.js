@@ -6,6 +6,8 @@ import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 import ProjectPreview from '../../components/ProjectPreview';
 
+import profile from '../../../content/assets/IMG_2223-ConvertImage.jpg';
+
 class WorkIndex extends Component {
   static propTypes = {
     data: PropTypes.shape({}).isRequired,
@@ -15,7 +17,14 @@ class WorkIndex extends Component {
     const { data } = this.props;
     const projects = data.allMarkdownRemark.edges;
     return (
-      <Layout>
+      <Layout
+        right={
+          <img
+            src={profile}
+            style={{ height: '100vh', width: '100%', objectFit: 'cover' }}
+          />
+        }
+      >
         <SEO
           title="Work"
           keywords={[`work`, `gatsby`, `javascript`, `react`]}
