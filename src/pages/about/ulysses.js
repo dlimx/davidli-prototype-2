@@ -13,15 +13,15 @@ class Ulysses extends Component {
   render() {
     return (
       <Layout
-        right={
+        right={() => (
           <img
             src={profile}
             style={{ height: '100vh', width: '100%', objectFit: 'cover' }}
           />
-        }
+        )}
       >
         <SEO
-          title="Dinner Club"
+          title="Ulysses"
           keywords={[`work`, `gatsby`, `javascript`, `react`]}
         />
         <div>

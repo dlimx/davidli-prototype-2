@@ -18,12 +18,12 @@ class WorkIndex extends Component {
     const projects = data.allMarkdownRemark.edges;
     return (
       <Layout
-        right={
+        right={() => (
           <img
             src={profile}
             style={{ height: '100vh', width: '100%', objectFit: 'cover' }}
           />
-        }
+        )}
       >
         <SEO
           title="Work"

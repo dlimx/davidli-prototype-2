@@ -11,14 +11,7 @@ import profile from '../../../content/assets/IMG_2223-ConvertImage.jpg';
 class DinnerClub extends Component {
   render() {
     return (
-      <Layout
-        right={
-          <img
-            src={profile}
-            style={{ height: '100vh', width: '100%', objectFit: 'cover' }}
-          />
-        }
-      >
+      <Layout>
         <SEO
           title="Dinner Club"
           keywords={[`work`, `gatsby`, `javascript`, `react`]}

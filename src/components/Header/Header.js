@@ -10,7 +10,7 @@ import image from './logo.png';
 
 const Header = () => (
   <div className={classNames(styles.header)}>
-    <div className={classNames('main--container', styles.headerLinks)}>
+    <div className={classNames(styles.headerLinks)}>
       <Link to="/" className={`${styles.headerImage}`}>
         <img src={image} alt="logo" className={`${styles.headerImage}`} />
       </Link>

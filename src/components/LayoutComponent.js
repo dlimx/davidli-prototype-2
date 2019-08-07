@@ -37,7 +37,7 @@ class LayoutComponent extends Component {
         <div
           style={{
             width: showRight ? '70%' : '100%',
-            paddingLeft: showRight ? '10%' : 0,
+            paddingLeft: showRight ? '5%' : 0,
           }}
         >
           <div className={styles.placeholder} />
@@ -53,7 +53,13 @@ class LayoutComponent extends Component {
                 distanceFromBottom,
                 calculatedHeight,
               }) => (
-                <header style={style}>
+                <header
+                  style={{
+                    ...style,
+                    width: '100%',
+                    paddingLeft: !right && !isPhone ? '5%' : 0,
+                  }}
+                >
                   <Header siteTitle={data.site.siteMetadata.title} />
                 </header>
               )}
@@ -69,7 +75,7 @@ class LayoutComponent extends Component {
               className={styles.rightContainer}
               style={{ position: fixedRight ? 'fixed' : 'relative' }}
             >
-              {right}
+              {right instanceof Function ? right() : right}
             </div>
           </div>
         )}
