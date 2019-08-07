@@ -44,24 +44,22 @@ class LayoutComponent extends Component {
           <div className={styles.placeholder} />
           <StickyContainer>
             <Sticky topOffset={0}>
-              {({
-                style,
-
-                // the following are also available but unused in this example
-                isSticky,
-                wasSticky,
-                distanceFromTop,
-                distanceFromBottom,
-                calculatedHeight,
-              }) => (
+              {({ style }) => (
                 <header
                   style={{
                     ...style,
-                    width: '100%',
-                    paddingLeft: !right && !isPhone ? '5%' : 0,
                   }}
                 >
-                  <Header siteTitle={data.site.siteMetadata.title} />
+                  <div className="main--container">
+                    <div
+                      style={{
+                        width: !isPhone && !right ? '70%' : '100%',
+                        paddingLeft: !isPhone && !right ? '5%' : 0,
+                      }}
+                    >
+                      <Header siteTitle={data.site.siteMetadata.title} />
+                    </div>
+                  </div>
                 </header>
               )}
             </Sticky>

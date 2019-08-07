@@ -258,6 +258,10 @@ a {
   }
 }
 
+.container {
+  max-width: $container;
+}
+
 .layout--row {
   display: flex;
   flex-direction: row;
