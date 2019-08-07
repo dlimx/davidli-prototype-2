@@ -16,6 +16,7 @@ class LayoutComponent extends Component {
     fixedRight: PropTypes.bool,
     windowContext: PropTypes.shape({
       width: PropTypes.number.isRequired,
+      scrollY: PropTypes.number.isRequired,
     }).isRequired,
   };
 
@@ -24,7 +25,7 @@ class LayoutComponent extends Component {
     fixedRight: true,
   };
 
-  defaultOffset = 200;
+  defaultOffset = theme.headerPaddingValue;
 
   render() {
     const { data, children, windowContext, right, fixedRight } = this.props;

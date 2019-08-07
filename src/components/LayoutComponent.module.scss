@@ -4,7 +4,7 @@
   height: 0px;
 
   @media #{$breakpoint-gt-md} {
-    height: 200px;
+    height: $header-padding-height;
   }
 }
 

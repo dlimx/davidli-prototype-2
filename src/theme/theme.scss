@@ -72,6 +72,8 @@ hr {
 
 $container: 960px;
 $header-height: 60px;
+$header-padding-value: 200;
+$header-padding-height: $header-padding-value + px;
 
 $sm-value: 600;
 $md-value: 960;
@@ -102,7 +104,7 @@ $breakpoint-height-xs: 'screen and (max-height: 599px)';
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  overflow-y: scroll;
+  height: initial;
 }
 
 // Set box-sizing globally to handle padding and border widths
@@ -339,4 +341,5 @@ a {
 
   smValue: $sm-value;
   mdValue: $md-value;
+  headerPaddingValue: $header-padding-value;
 }

@@ -26,18 +26,9 @@ class BlogPost extends React.Component {
     const { previous, next } = pageContext;
 
     return (
-      <Layout
-        right={
-          <img
-            src={profile}
-            style={{ height: '100vh', width: '100%', objectFit: 'cover' }}
-          />
-        }
-        location={location}
-        title={siteTitle}
-      >
+      <Layout location={location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <BackButton to="/stories/" />
+        <BackButton to="/stories" />
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{

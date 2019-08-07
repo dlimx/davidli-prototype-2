@@ -24,7 +24,7 @@ const Header = () => (
         </Link>
         {constants.blogActive && (
           <Link
-            to="/stories/"
+            to="/stories"
             className={classNames('header-link', styles.link)}
             activeClassName={styles.linkActive}
           >
@@ -32,7 +32,7 @@ const Header = () => (
           </Link>
         )}
         <Link
-          to="/work/"
+          to="/work"
           className={classNames('header-link', styles.link)}
           activeClassName={styles.linkActive}
         >

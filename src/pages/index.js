@@ -54,7 +54,7 @@ class AboutIndex extends Component {
         <hr />
 
         <h3>Life Projects</h3>
-        <Link to="/about/ulysses/">
+        <Link to="/about/ulysses">
           <h5>Ulysses</h5>
         </Link>
         <blockquote>
@@ -67,9 +67,9 @@ class AboutIndex extends Component {
           I have received 24 challenges, and here is my journey to finish them
           thus far.
         </p>
-        <Link to="/about/ulysses/">My Challenges →</Link>
+        <Link to="/about/ulysses">My Challenges →</Link>
         <div style={{ height: 40 }} />
-        <Link to="/about/dinner-club/">
+        <Link to="/about/dinner-club">
           <h5>Dinner Club</h5>
         </Link>
         <blockquote>
