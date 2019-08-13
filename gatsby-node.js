@@ -46,7 +46,7 @@ const createBlogPosts = (actions, result) => {
   const BlogIndex = path.resolve(`./src/templates/BlogIndex.js`);
 
   if (result.errors) {
-    console.log(result.errors);
+    console.error(result.errors);
     throw result.errors;
   }
 
@@ -134,7 +134,7 @@ const createProjects = (actions, result) => {
   const ProjectPage = path.resolve(`./src/templates/ProjectPage.js`);
 
   if (result.errors) {
-    console.log(result.errors);
+    console.error(result.errors);
     throw result.errors;
   }
 

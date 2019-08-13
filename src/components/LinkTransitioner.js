@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/lib/AniLink';
 import PropTypes from 'prop-types';
 
 export default class LinkTransitioner extends Component {

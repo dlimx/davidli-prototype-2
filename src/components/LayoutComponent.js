@@ -50,13 +50,13 @@ class LayoutComponent extends Component {
                     ...style,
                   }}
                 >
-                  <div className="main--container">
-                    <div
-                      style={{
-                        width: !isPhone && !right ? '70%' : '100%',
-                        paddingLeft: !isPhone && !right ? '5%' : 0,
-                      }}
-                    >
+                  <div
+                    style={{
+                      width: !isPhone && !right ? '70%' : '100%',
+                      paddingLeft: !isPhone && !right ? '5%' : 0,
+                    }}
+                  >
+                    <div className="main--container">
                       <Header siteTitle={data.site.siteMetadata.title} />
                     </div>
                   </div>

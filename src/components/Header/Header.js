@@ -25,7 +25,7 @@ const Header = () => (
         </LinkTransitioner>
         {constants.blogActive && (
           <LinkTransitioner
-            to="/stories"
+            to="/stories/"
             className={classNames('header-link', styles.link)}
             activeClassName={styles.linkActive}
           >
@@ -33,7 +33,7 @@ const Header = () => (
           </LinkTransitioner>
         )}
         <LinkTransitioner
-          to="/work"
+          to="/work/"
           className={classNames('header-link', styles.link)}
           activeClassName={styles.linkActive}
         >

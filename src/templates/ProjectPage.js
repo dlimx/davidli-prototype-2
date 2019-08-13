@@ -35,7 +35,7 @@ class ProjectPage extends React.Component {
         title={siteTitle}
       >
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <BackButton to="/work" />
+        <BackButton to="/work/" />
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{

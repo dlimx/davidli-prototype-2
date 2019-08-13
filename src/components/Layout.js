@@ -9,7 +9,7 @@ class Layout extends Component {
     return (
       <StaticQuery
         query={graphql`
-          query SiteTitleQuery {
+          query SiteQuery {
             site {
               siteMetadata {
                 title
