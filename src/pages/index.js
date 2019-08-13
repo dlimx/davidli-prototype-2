@@ -10,6 +10,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
 import profile from '../../content/assets/IMG_2223-ConvertImage.jpg';
+import LinkTransitioner from '../components/LinkTransitioner';
 
 class AboutIndex extends Component {
   static propTypes = {
@@ -54,9 +55,9 @@ class AboutIndex extends Component {
         <hr />
 
         <h3>Life Projects</h3>
-        <Link to="/about/ulysses">
+        <LinkTransitioner to="/about/ulysses">
           <h5>Ulysses</h5>
-        </Link>
+        </LinkTransitioner>
         <blockquote>
           What&#39;s something you&#39;ve done, or that you want to do, that you
           think I should do? It can be anything you want, as easy or as hard as
@@ -67,11 +68,11 @@ class AboutIndex extends Component {
           I have received 24 challenges, and here is my journey to finish them
           thus far.
         </p>
-        <Link to="/about/ulysses">My Challenges →</Link>
+        <LinkTransitioner to="/about/ulysses">My Challenges →</LinkTransitioner>
         <div style={{ height: 40 }} />
-        <Link to="/about/dinner-club">
+        <LinkTransitioner to="/about/dinner-club">
           <h5>Dinner Club</h5>
-        </Link>
+        </LinkTransitioner>
         <blockquote>
           Every week, my fellow cooks and I each invite one person. The only
           rule? It has to be someone the other two don&#39;t know. Themed,
@@ -82,7 +83,9 @@ class AboutIndex extends Component {
           If you want to join the invite list, please just reach out. Check out
           some of our past meals here.
         </p>
-        <Link to="/about/dinner-club/">Our dinners →</Link>
+        <LinkTransitioner to="/about/dinner-club/">
+          Our dinners →
+        </LinkTransitioner>
       </Layout>
     );
   }

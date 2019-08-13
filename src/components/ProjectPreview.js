@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
+import LinkTransitioner from './LinkTransitioner';
 
 export default class ProjectPreview extends Component {
   static propTypes = {
@@ -27,9 +28,12 @@ export default class ProjectPreview extends Component {
             marginBottom: 16,
           }}
         >
-          <Link style={{ boxShadow: `none` }} to={`/work${post.fields.slug}`}>
+          <LinkTransitioner
+            style={{ boxShadow: `none` }}
+            to={`/work${post.fields.slug}`}
+          >
             {title}
-          </Link>
+          </LinkTransitioner>
         </h3>
         <small>{post.frontmatter.date}</small>
         <p dangerouslySetInnerHTML={{ __html: post.excerpt }} />

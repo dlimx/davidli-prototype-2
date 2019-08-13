@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
+import LinkTransitioner from './LinkTransitioner';
 
 export default class BlogNavigation extends Component {
   static propTypes = {
@@ -27,16 +28,16 @@ export default class BlogNavigation extends Component {
       >
         <li>
           {!isFirst && (
-            <Link to={`/stories${prevPage}`} rel="prev">
+            <LinkTransitioner to={`/stories${prevPage}`} rel="prev">
               ← Previous Page
-            </Link>
+            </LinkTransitioner>
           )}
         </li>
         <li>
           {!isLast && (
-            <Link to={`/stories/${nextPage}`} rel="next">
+            <LinkTransitioner to={`/stories/${nextPage}`} rel="next">
               Next Page →
-            </Link>
+            </LinkTransitioner>
           )}
         </li>
       </ul>

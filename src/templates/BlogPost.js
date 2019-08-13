@@ -8,6 +8,7 @@ import SEO from '../components/SEO';
 import BackButton from '../components/BackButton';
 
 import profile from '../../content/assets/profile-pic.jpg';
+import LinkTransitioner from '../components/LinkTransitioner';
 
 class BlogPost extends React.Component {
   static propTypes = {
@@ -58,16 +59,19 @@ class BlogPost extends React.Component {
         >
           <li>
             {previous && (
-              <Link to={`/stories${previous.fields.slug}`} rel="prev">
+              <LinkTransitioner
+                to={`/stories${previous.fields.slug}`}
+                rel="prev"
+              >
                 ← {previous.frontmatter.title}
-              </Link>
+              </LinkTransitioner>
             )}
           </li>
           <li>
             {next && (
-              <Link to={`/stories${next.fields.slug}`} rel="next">
+              <LinkTransitioner to={`/stories${next.fields.slug}`} rel="next">
                 {next.frontmatter.title} →
-              </Link>
+              </LinkTransitioner>
             )}
           </li>
         </ul>

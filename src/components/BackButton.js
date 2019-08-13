@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
+import LinkTransitioner from './LinkTransitioner';
 
 export default class BackButton extends Component {
   static propTypes = {
@@ -10,9 +11,9 @@ export default class BackButton extends Component {
   render() {
     const { to } = this.props;
     return (
-      <Link to={to} rel="prev">
+      <LinkTransitioner to={to} rel="prev">
         <h5>← Back</h5>
-      </Link>
+      </LinkTransitioner>
     );
   }
 }

@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import theme from '../theme/theme.scss';
+import LinkTransitioner from './LinkTransitioner';
 
 export default class BlogPreview extends Component {
   static propTypes = {
@@ -23,7 +24,10 @@ export default class BlogPreview extends Component {
     const title = post.frontmatter.title || post.fields.slug;
 
     return (
-      <Link to={`/stories${post.fields.slug}`} key={post.fields.slug}>
+      <LinkTransitioner
+        to={`/stories${post.fields.slug}`}
+        key={post.fields.slug}
+      >
         <h3
           style={{
             marginTop: 16,
@@ -39,7 +43,7 @@ export default class BlogPreview extends Component {
           dangerouslySetInnerHTML={{ __html: post.excerpt }}
           style={{ paddingBottom: 32 }}
         />
-      </Link>
+      </LinkTransitioner>
     );
   }
 }

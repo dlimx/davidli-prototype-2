@@ -7,37 +7,38 @@ import styles from './HeaderStyles.module.scss';
 import constants from '../../constants/index';
 
 import image from './logo.png';
+import LinkTransitioner from '../LinkTransitioner';
 
 const Header = () => (
   <div className={classNames(styles.header)}>
     <div className={classNames(styles.headerLinks)}>
-      <Link to="/" className={`${styles.headerImage}`}>
+      <LinkTransitioner to="/" className={`${styles.headerImage}`}>
         <img src={image} alt="logo" className={`${styles.headerImage}`} />
-      </Link>
+      </LinkTransitioner>
       <div className={styles.linkContainer}>
-        <Link
+        <LinkTransitioner
           to="/"
           className={classNames('header-link', styles.link)}
           activeClassName={styles.linkActive}
         >
           About
-        </Link>
+        </LinkTransitioner>
         {constants.blogActive && (
-          <Link
+          <LinkTransitioner
             to="/stories"
             className={classNames('header-link', styles.link)}
             activeClassName={styles.linkActive}
           >
             Stories
-          </Link>
+          </LinkTransitioner>
         )}
-        <Link
+        <LinkTransitioner
           to="/work"
           className={classNames('header-link', styles.link)}
           activeClassName={styles.linkActive}
         >
           Work
-        </Link>
+        </LinkTransitioner>
       </div>
     </div>
   </div>
