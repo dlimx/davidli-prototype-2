@@ -30,7 +30,7 @@ class AboutIndex extends Component {
         )}
       >
         <SEO title="Home" keywords={[`david`, `about`, `work`, `history`]} />
-        <h1>
+        <h1 className={styles.title}>
           Hi - I&#39;m <span style={{ color: theme.colorPrimary }}>David</span>
         </h1>
         <p>
