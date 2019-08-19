@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { graphql } from 'gatsby';
+import { graphql, withPrefix } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import Layout from '../../components/Layout';
+import Layout from '../../components/Layout/Layout';
 import SEO from '../../components/SEO';
 import ProjectPreview from '../../components/ProjectPreview';
 
@@ -20,6 +20,7 @@ class WorkIndex extends Component {
       <Layout
         right={() => (
           <img
+            alt="Profile"
             src={profile}
             style={{ height: '100vh', width: '100%', objectFit: 'cover' }}
           />
@@ -32,13 +33,21 @@ class WorkIndex extends Component {
         <h1>Work</h1>
         <p>
           I am a software engineer currently at{' '}
-          <a href="https://quartermaster.com">Quartermaster</a>.
+          <a href="https://quartermaster.house">Quartermaster</a>.
         </p>
         <p>
           I graduated <a href="https://mcgill.ca">McGill University</a> with a
           degree in Honours Biochemistry. I had initially planned on pursuing
           medicine - but I found that my passions lie with software.
         </p>
+
+        <hr />
+
+        <h3>Links</h3>
+        <a href={withPrefix('/Resume-LiMinXiao.pdf')}>Resume</a>
+
+        <hr />
+
         {projects.map(({ node }) => (
           <ProjectPreview post={node} key={node.fields.slug} />
         ))}

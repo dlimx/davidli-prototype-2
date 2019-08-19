@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import Collapsible from 'react-collapsible';
 
-import Layout from '../../components/Layout';
+import Layout from '../../components/Layout/Layout';
 import SEO from '../../components/SEO';
 
 import profile from '../../../content/assets/IMG_2223-ConvertImage.jpg';

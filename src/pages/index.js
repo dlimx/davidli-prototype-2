@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { graphql, withPrefix, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
-import classNames from 'classnames';
 import theme from '../theme/theme.scss';
 import styles from './AboutStyles.module.scss';
 
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO';
 
 import profile from '../../content/assets/IMG_2223-ConvertImage.jpg';
@@ -35,22 +34,8 @@ class AboutIndex extends Component {
         </h1>
         <p>
           I am a software engineer currently at{' '}
-          <a href="https://quartermaster.com">Quartermaster</a>.
+          <a href="https://quartermaster.house">Quartermaster</a>.
         </p>
-        <p>
-          I graduated <a href="https://mcgill.ca">McGill University</a> with a
-          degree in Honours Biochemistry. I had initially planned on pursuing
-          medicine - but I found that my passions lie with software.
-        </p>
-        <p>
-          I have two broad goals in life: make the world a better place, and
-          live and create interesting stories.
-        </p>
-
-        <hr />
-
-        <h3>Links</h3>
-        <a href={withPrefix('/Resume-LiMinXiao.pdf')}>Resume</a>
 
         <hr />
 

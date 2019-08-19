@@ -2,7 +2,7 @@
 
 .title {
   @media #{$breakpoint-gt-md} {
-    padding: $padding-6 0;
+    padding: $padding-4 0 $padding-6;
     font-size: 6em;
   }
 }

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import { StickyContainer, Sticky } from 'react-sticky';
 import classNames from 'classnames';
-import Header from './Header/Header';
+import Header from '../Header/Header';
 
-import theme from '../theme/theme.scss';
+import theme from '../../theme/theme.scss';
 import styles from './LayoutComponent.module.scss';
 
 class LayoutComponent extends Component {
