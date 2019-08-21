@@ -56,7 +56,25 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#3198e8`,
         display: `minimal-ui`,
-        icon: `src/components/Header/logo.png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: './src/components/header/logo.png',
+
+        lang: 'en-US',
+        orientation: 'any',
+        version: '1.0',
+
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          favicons: true,
+          firefox: true,
+          windows: true,
+        },
       },
     },
     {
