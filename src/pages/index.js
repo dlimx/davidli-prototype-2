@@ -32,10 +32,7 @@ class AboutIndex extends Component {
         <h1 className={styles.title}>
           Hi - I&#39;m <span style={{ color: theme.colorPrimary }}>David</span>
         </h1>
-        <p>
-          I am a software engineer currently at{' '}
-          <a href="https://quartermaster.house">Quartermaster</a>.
-        </p>
+        <subtitle>Let&#39;s make the world a better place.</subtitle>
 
         <hr />
 
